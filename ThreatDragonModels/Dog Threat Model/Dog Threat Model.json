@@ -38,8 +38,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "e38c3dc0-7cf2-40c6-ac5a-b9cfe4d8c01b",
             "zIndex": 1,
+            "id": "e38c3dc0-7cf2-40c6-ac5a-b9cfe4d8c01b",
             "data": {
               "type": "tm.Actor",
               "name": "Council",
@@ -72,6 +72,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "id": "ed2114a9-83dd-4de7-90d8-9e78a9154740",
             "data": {
               "type": "tm.Actor",
@@ -82,8 +83,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 2
+            }
           },
           {
             "shape": "trust-boundary-curve",
@@ -107,18 +107,38 @@
               "x": 1050,
               "y": 370
             },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 310
-              },
-              {
-                "x": 640,
-                "y": 420
-              }
-            ],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -346,7 +366,17 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 310
+              },
+              {
+                "x": 640,
+                "y": 420
+              }
+            ]
           },
           {
             "position": {
@@ -372,8 +402,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "2f059d62-b136-45d4-a039-050bc023f10f",
             "zIndex": 11,
+            "id": "2f059d62-b136-45d4-a039-050bc023f10f",
             "data": {
               "type": "tm.Store",
               "name": "dog’s registrater",
@@ -410,8 +440,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "0d8d1397-5cbb-4916-a84b-b9a2249ab71c",
             "zIndex": 12,
+            "id": "0d8d1397-5cbb-4916-a84b-b9a2249ab71c",
             "data": {
               "type": "tm.Process",
               "name": "Register",
@@ -447,6 +477,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "id": "53da61b0-4d0b-4ff1-b7a4-95a63e08e317",
             "data": {
               "type": "tm.Process",
@@ -460,8 +491,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 14
+            }
           },
           {
             "position": {
@@ -484,6 +514,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "id": "e3bfb15c-3f04-47cd-966d-5ab0d9eedf5e",
             "data": {
               "type": "tm.Process",
@@ -497,8 +528,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 15
+            }
           },
           {
             "position": {
@@ -521,6 +551,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "id": "901bcd99-db88-4b2a-bd7b-85c28bc48ba4",
             "data": {
               "type": "tm.Process",
@@ -534,8 +565,41 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 502.5,
+              "y": 492
             },
-            "zIndex": 16
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "council"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "2d267a2d-887e-4c8d-b99b-61d2fbcf0991",
+            "data": {
+              "type": "tm.Actor",
+              "name": "council",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            },
+            "zIndex": 17
           }
         ]
       }
