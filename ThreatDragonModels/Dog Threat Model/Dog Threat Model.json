@@ -32,12 +32,12 @@
         "cells": [
           {
             "position": {
-              "x": 188.75,
-              "y": 169.99999999999937
+              "x": 148.75,
+              "y": 169.9999999999987
             },
             "size": {
-              "width": 1640,
-              "height": 530
+              "width": 1680,
+              "height": 560
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -81,7 +81,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Dog Owner",
-              "description": "",
+              "description": "A person who legally owns one or more dogs and is in the council's range of authority, so wants to register their dog or manage their already existing regulations.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -211,54 +211,6 @@
             "vertices": [
               {
                 "x": 730,
-                "y": 750
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "renew form data",
-              "description": "Form consisting of dog's tag ID and new delivery address.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b57a490f-4135-4530-a8b4-bf3dfb2e88cc",
-            "labels": [
-              "renew form data"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
-            },
-            "vertices": [
-              {
-                "x": 660,
                 "y": 750
               }
             ]
@@ -1016,55 +968,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send Invoice",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "1dfeeb3d-bc37-412a-9edb-ad088585dd3c",
-            "labels": [
-              "Send Invoice"
-            ],
-            "source": {
-              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
-            },
-            "target": {
-              "x": 580,
-              "y": 990
-            },
-            "vertices": [
-              {
-                "x": 303.75,
-                "y": 960
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -1100,48 +1003,6 @@
                 "x": 1692.25,
                 "y": 740
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Pay Registration Invoice",
-              "description": "",
-              "outOfScope": true,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "60dd0281-f240-4daf-abc0-b395eabcb784",
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
-            },
-            "labels": [
-              "Pay Registration Invoice"
             ]
           },
           {
@@ -1492,31 +1353,31 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Enter Dog Regstration Infomation",
-              "description": "Enters the information for registering a dog.\nthe human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
+              "name": "renew form data",
+              "description": "Form consisting of dog's tag ID and new delivery address.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
             },
-            "id": "b06da6de-4b42-494c-a56b-053f68d4e2b1",
+            "id": "b57a490f-4135-4530-a8b4-bf3dfb2e88cc",
             "labels": [
-              "Enter Dog Regstration Infomation"
+              "renew form data"
             ],
             "source": {
               "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
             "target": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
             },
             "vertices": [
               {
-                "x": 451.75,
-                "y": 910
+                "x": 660,
+                "y": 750
               }
             ]
           },
@@ -1546,7 +1407,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
@@ -1593,40 +1454,32 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "ack and send tag id",
-              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
+              "name": "Enter Dog Regstration Infomation",
+              "description": "Enters the information for registering a dog.\nthe human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "HTTPS",
               "threats": []
             },
-            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
+            "id": "b06da6de-4b42-494c-a56b-053f68d4e2b1",
+            "labels": [
+              "Enter Dog Regstration Infomation"
+            ],
             "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
             "target": {
               "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "vertices": [
               {
-                "x": 760,
-                "y": 340
-              },
-              {
-                "x": 420,
-                "y": 370
-              },
-              {
-                "x": 370,
-                "y": 530
+                "x": 451.75,
+                "y": 910
               }
-            ],
-            "labels": [
-              "ack and send tag id"
             ]
           },
           {
@@ -1655,7 +1508,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
@@ -1705,13 +1558,69 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Registration triggered Invoce Details",
-              "description": "",
+              "name": "ack and send tag id",
+              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": 340
+              },
+              {
+                "x": 420,
+                "y": 370
+              },
+              {
+                "x": 370,
+                "y": 530
+              }
+            ],
+            "labels": [
+              "ack and send tag id"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Registration triggered Invoce Details",
+              "description": "Once registration details have been updated, invoice details are generated in the database and sent to the mail service.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
@@ -1739,6 +1648,97 @@
                 "x": 316,
                 "y": 350
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send Invoice",
+              "description": "An invoice is generated and mailed to the dog owner.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1dfeeb3d-bc37-412a-9edb-ad088585dd3c",
+            "labels": [
+              "Send Invoice"
+            ],
+            "source": {
+              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
+            },
+            "target": {
+              "x": 580,
+              "y": 990
+            },
+            "vertices": [
+              {
+                "x": 303.75,
+                "y": 960
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Pay Registration Invoice",
+              "description": "",
+              "outOfScope": true,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "60dd0281-f240-4daf-abc0-b395eabcb784",
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
+            },
+            "labels": [
+              "Pay Registration Invoice"
             ]
           },
           {
@@ -2111,8 +2111,8 @@
           },
           {
             "position": {
-              "x": 1154,
-              "y": 700
+              "x": 1310,
+              "y": 810
             },
             "size": {
               "width": 112.5,
