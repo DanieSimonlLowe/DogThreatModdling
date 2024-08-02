@@ -155,7 +155,7 @@
             "data": {
               "type": "tm.Store",
               "name": "Dog Datastore",
-              "description": "Stores information relating to all dog entities known under the council.",
+              "description": "Stores information relating to dog entities known under the council.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -968,192 +968,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Recive Invoice",
-              "description": "",
-              "outOfScope": true,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "408241b0-14ca-425f-a29a-0b0e82df2c70",
-            "source": {
-              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
-            },
-            "target": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "labels": [
-              "Recive Invoice"
-            ],
-            "vertices": [
-              {
-                "x": 1692.25,
-                "y": 740
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Reqeast Tag",
-              "description": "",
-              "outOfScope": true,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "159f7a05-9261-47e4-8d38-9e86b7963f46",
-            "source": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "target": {
-              "cell": "dfce18fd-50f2-4580-8311-35f8defb524d"
-            },
-            "labels": [
-              "Reqeast Tag"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Reqeast Invoice Infomation",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "5d674e1b-de34-4800-a615-48a3befe21c2",
-            "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "target": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "vertices": [
-              {
-                "x": 1393.25,
-                "y": 390
-              }
-            ],
-            "labels": [
-              "Reqeast Invoice Infomation"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Recive data linked to Invoice ",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "69277476-28d3-49f8-bd32-49a3983ea73b",
-            "source": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "target": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "vertices": [
-              {
-                "x": 1753.25,
-                "y": 505
-              }
-            ],
-            "labels": [
-              "Recive data linked to Invoice "
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": null
               }
             },
@@ -1211,148 +1025,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Reqeast Invoice Data",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "ba905dc6-5e8f-49a5-9860-ab0f6c952006",
-            "source": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "target": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "vertices": [
-              {
-                "x": 1686.25,
-                "y": 540
-              },
-              {
-                "x": 1650,
-                "y": 540
-              }
-            ],
-            "labels": [
-              "Reqeast Invoice Data"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify Invoice Received",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "ab3c8e22-50ee-4181-b3b5-26e70a8f3e98",
-            "source": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "target": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "vertices": [
-              {
-                "x": 1520,
-                "y": 630
-              }
-            ],
-            "labels": [
-              "Notify Invoice Received"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Update Invoice State",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b48daa45-55d3-4cae-83c5-ad5d7202ad64",
-            "source": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "target": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "labels": [
-              "Update Invoice State"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "renew form data",
               "description": "Form consisting of dog's tag ID and new delivery address.",
               "outOfScope": false,
@@ -1379,59 +1051,6 @@
                 "x": 660,
                 "y": 750
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "ACK",
-              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
-            "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "target": {
-              "x": 600,
-              "y": 960
-            },
-            "vertices": [
-              {
-                "x": 560,
-                "y": 870
-              },
-              {
-                "x": 580,
-                "y": 920
-              }
-            ],
-            "labels": [
-              "ACK"
             ]
           },
           {
@@ -1710,6 +1329,59 @@
                 "sourceMarker": {
                   "name": ""
                 },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ACK",
+              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
+            "source": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "target": {
+              "x": 600,
+              "y": 960
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 870
+              },
+              {
+                "x": 580,
+                "y": 920
+              }
+            ],
+            "labels": [
+              "ACK"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -1720,9 +1392,9 @@
             "data": {
               "type": "tm.Flow",
               "name": "Pay Registration Invoice",
-              "description": "",
+              "description": "The dog owner pays for the invoice from their registration with the details listed in the invoice.\n",
               "outOfScope": true,
-              "reasonOutOfScope": "",
+              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
               "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
@@ -1739,6 +1411,344 @@
             },
             "labels": [
               "Pay Registration Invoice"
+            ],
+            "vertices": [
+              {
+                "x": 1400,
+                "y": 1010.5
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Recive Invoice",
+              "description": "Council employees check that the bank transfers made to the assacated bank account.\n",
+              "outOfScope": true,
+              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "408241b0-14ca-425f-a29a-0b0e82df2c70",
+            "source": {
+              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
+            },
+            "target": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "labels": [
+              "Recive Invoice"
+            ],
+            "vertices": [
+              {
+                "x": 1692.25,
+                "y": 740
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Reqeast Tag",
+              "description": "The council employee manually requests the tags to be made and shipped to the address that the invoice is related to.\n",
+              "outOfScope": true,
+              "reasonOutOfScope": "The council employee manually requests the tags to be made and shipped out of any of the systems.\n",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "159f7a05-9261-47e4-8d38-9e86b7963f46",
+            "source": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "target": {
+              "cell": "dfce18fd-50f2-4580-8311-35f8defb524d"
+            },
+            "labels": [
+              "Reqeast Tag"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Recive data linked to Invoice ",
+              "description": "The employee receives the data linked to the reqeasted invoice so that they can create and send a tag, so the address and the dog id\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "69277476-28d3-49f8-bd32-49a3983ea73b",
+            "source": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "target": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "vertices": [
+              {
+                "x": 1630,
+                "y": 480
+              },
+              {
+                "x": 1753.25,
+                "y": 505
+              }
+            ],
+            "labels": [
+              "Recive data linked to Invoice "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Reqeast Invoice Data",
+              "description": "The employee enters the invoice reference to find information about the linked dog owner so that they can create and send the tag.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ba905dc6-5e8f-49a5-9860-ab0f6c952006",
+            "source": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "target": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "vertices": [
+              {
+                "x": 1686.25,
+                "y": 540
+              },
+              {
+                "x": 1650,
+                "y": 540
+              }
+            ],
+            "labels": [
+              "Reqeast Invoice Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify Invoice Received",
+              "description": "The employee notifies the system that they have sent the tag and that the invoice is now paid by providing the invoice refrance.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ab3c8e22-50ee-4181-b3b5-26e70a8f3e98",
+            "source": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "target": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "vertices": [
+              {
+                "x": 1520,
+                "y": 630
+              }
+            ],
+            "labels": [
+              "Notify Invoice Received"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Update Invoice State",
+              "description": "The invoice is marked as paid for the provided reference.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b48daa45-55d3-4cae-83c5-ad5d7202ad64",
+            "source": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "target": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "labels": [
+              "Update Invoice State"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Reqeast Invoice Infomation",
+              "description": "The information for the provided reference that is required to send the tag is retrieved, so the dog ID and the address.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5d674e1b-de34-4800-a615-48a3befe21c2",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "vertices": [
+              {
+                "x": 1393.25,
+                "y": 390
+              }
+            ],
+            "labels": [
+              "Reqeast Invoice Infomation"
             ]
           },
           {
@@ -1986,7 +1996,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Council\nEmployee",
-              "description": "",
+              "description": "A person who works for the company in an admin role for the system.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -2159,9 +2169,9 @@
             "data": {
               "type": "tm.Process",
               "name": "Process Bank \nTransfer",
-              "description": "",
+              "description": "Used to transfer money between accounts so that money can be paid\n",
               "outOfScope": true,
-              "reasonOutOfScope": "",
+              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
               "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
@@ -2196,9 +2206,9 @@
             "data": {
               "type": "tm.Process",
               "name": "Create \nand Send\nTag",
-              "description": "",
+              "description": "The system for creating and sending the tags to dog owners\n",
               "outOfScope": true,
-              "reasonOutOfScope": "",
+              "reasonOutOfScope": "The council employee manually requests the tags to be made and shipped out of any of the systems.\n",
               "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
