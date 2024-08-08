@@ -274,7 +274,7 @@
                 {
                   "id": "37a29e9b-b224-4237-8eab-bc1d921f6de5",
                   "title": "New STRIDE threat",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "If an attacker gains access to the database, then they could view all the information in the database easily.\n",
@@ -301,7 +301,7 @@
               "threatFrequency": {
                 "tampering": 5,
                 "repudiation": 1,
-                "informationDisclosure": 4,
+                "informationDisclosure": 5,
                 "denialOfService": 2
               }
             }
