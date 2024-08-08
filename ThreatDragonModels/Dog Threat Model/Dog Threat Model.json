@@ -779,62 +779,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Registration triggered Invoice Details",
-              "description": "Once registration details have been updated, invoice details are generated in the database and sent to the mail service.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "cb0a5314-57c3-4936-a760-26be2df62cfd",
-            "labels": [
-              "Registration triggered Invoice Details"
-            ],
-            "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "target": {
-              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
-            },
-            "vertices": [
-              {
-                "x": 900,
-                "y": 260
-              },
-              {
-                "x": 680,
-                "y": 280
-              },
-              {
-                "x": 316,
-                "y": 350
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Recieve data linked to Invoice ",
               "description": "The employee receives the data linked to the reqeasted invoice so that they can create and send a tag, so the address and the dog id\n",
               "outOfScope": false,
@@ -2438,8 +2382,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Log registration",
-              "description": "Logs all registrations or attempts at registration",
+              "name": "Logs Manage Resistraion",
+              "description": "Contains all actions taken while managing the registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -2449,15 +2393,15 @@
               "protocol": "",
               "threats": []
             },
-            "id": "47ff0173-23f4-45b7-b9b6-829a346a8da4",
+            "id": "7d079810-4c4e-4261-b0ab-178e565ca520",
             "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
             },
             "target": {
               "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
             },
             "labels": [
-              "Log registration"
+              "Logs Manage Resistraion"
             ]
           },
           {
@@ -2500,6 +2444,48 @@
             },
             "labels": [
               "Log Data Base"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log registration",
+              "description": "Logs all registrations or attempts at registration",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "47ff0173-23f4-45b7-b9b6-829a346a8da4",
+            "source": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "target": {
+              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+            },
+            "labels": [
+              "Log registration"
             ]
           },
           {
@@ -2570,26 +2556,40 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Logs Manage Resistraion",
-              "description": "Contains all actions taken while managing the registration.",
+              "name": "Registration triggered Invoice Details",
+              "description": "Once registration details have been updated, invoice details are generated in the database and sent to the mail service.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
             },
-            "id": "7d079810-4c4e-4261-b0ab-178e565ca520",
+            "id": "cb0a5314-57c3-4936-a760-26be2df62cfd",
+            "labels": [
+              "Registration triggered Invoice Details"
+            ],
             "source": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "target": {
-              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
             },
-            "labels": [
-              "Logs Manage Resistraion"
+            "vertices": [
+              {
+                "x": 900,
+                "y": 260
+              },
+              {
+                "x": 680,
+                "y": 280
+              },
+              {
+                "x": 316,
+                "y": 350
+              }
             ]
           },
           {
