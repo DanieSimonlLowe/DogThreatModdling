@@ -1848,7 +1848,13 @@
             },
             "target": {
               "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            }
+            },
+            "vertices": [
+              {
+                "x": 1360,
+                "y": 460
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -2557,7 +2563,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Someone could be a man in the middle and change information in the invoices so that the invoice is instead sent to them.\n",
-                  "mitigation": "All emails would be encrypted, so the emails can't be changed.",
+                  "mitigation": "All emails would be encrypted, so the emails can't be changed and produce meaningful data.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 43,
@@ -2565,7 +2571,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 5,
+                "tampering": 6,
                 "informationDisclosure": 4,
                 "denialOfService": 0
               }
