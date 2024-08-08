@@ -119,7 +119,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Register Dog \nWeb Page",
-              "description": "HTTPS webpage endpoint(s) for dog registration.",
+              "description": "HTTPS web page endpoint(s) and api(s) that are used for dog registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -168,19 +168,6 @@
                   "score": ""
                 },
                 {
-                  "id": "847e0abc-b2be-49c1-a44e-f5b5f9e490b5",
-                  "title": "Data Manipulation",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS this is prevented as the data is encrypted in transit so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 62,
-                  "score": ""
-                },
-                {
                   "id": "79cc0bda-5678-41c0-bc92-2db3465603a2",
                   "title": "New STRIDE threat",
                   "status": "Open",
@@ -195,8 +182,8 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 6,
-                "tampering": 0,
+                "spoofing": 7,
+                "tampering": -1,
                 "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 1,
