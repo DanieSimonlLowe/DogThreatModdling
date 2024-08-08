@@ -1466,91 +1466,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send Invoice",
-              "description": "An invoice is generated and mailed to the dog owner.\n",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "7cfd0ebf-36d4-40dd-8712-2db78090e072",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Someone could be a man in the middle and spy on people using the application for getting information like their address and email.\n\n\n",
-                  "mitigation": "All emails would be encrypted, so this information could not be disclosed.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 42,
-                  "score": ""
-                },
-                {
-                  "id": "1e5b9ce6-05d3-4997-81fa-d5ba05dcb6d0",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Someone could be a man in the middle and change on people using the application for getting information like their address and email.",
-                  "mitigation": "All emails would be encrypted, so the emails can't be changed.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 43,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 4,
-                "informationDisclosure": 4,
-                "denialOfService": 0
-              }
-            },
-            "id": "1dfeeb3d-bc37-412a-9edb-ad088585dd3c",
-            "labels": [
-              "Send Invoice"
-            ],
-            "source": {
-              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
-            },
-            "target": {
-              "x": 580,
-              "y": 990
-            },
-            "vertices": [
-              {
-                "x": 263.75,
-                "y": 780
-              },
-              {
-                "x": 303.75,
-                "y": 960
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -2589,6 +2504,91 @@
               {
                 "x": 316,
                 "y": 350
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send Invoice",
+              "description": "An invoice is generated and mailed to the dog owner.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7cfd0ebf-36d4-40dd-8712-2db78090e072",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could be a man in the middle and spy on people using the application for getting information like their address and email.\n\n\n",
+                  "mitigation": "All emails would be encrypted, so this information could not be disclosed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 42,
+                  "score": ""
+                },
+                {
+                  "id": "1e5b9ce6-05d3-4997-81fa-d5ba05dcb6d0",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could be a man in the middle and change information in the invoices so that the invoice is instead sent to them.\n",
+                  "mitigation": "All emails would be encrypted, so the emails can't be changed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 43,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 5,
+                "informationDisclosure": 4,
+                "denialOfService": 0
+              }
+            },
+            "id": "1dfeeb3d-bc37-412a-9edb-ad088585dd3c",
+            "labels": [
+              "Send Invoice"
+            ],
+            "source": {
+              "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
+            },
+            "target": {
+              "x": 580,
+              "y": 990
+            },
+            "vertices": [
+              {
+                "x": 263.75,
+                "y": 780
+              },
+              {
+                "x": 303.75,
+                "y": 960
               }
             ]
           },
