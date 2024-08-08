@@ -1508,54 +1508,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Recieve Invoice",
-              "description": "Council employees check that the bank transfers made to the assacated bank account.\n",
-              "outOfScope": true,
-              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "408241b0-14ca-425f-a29a-0b0e82df2c70",
-            "labels": [
-              "Recieve Invoice"
-            ],
-            "source": {
-              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
-            },
-            "target": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "vertices": [
-              {
-                "x": 1692.25,
-                "y": 740
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": null
               }
             },
@@ -2599,6 +2551,54 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Recieve Invoice",
+              "description": "Council employees check that the bank transfers made to the assacated bank account.\n",
+              "outOfScope": true,
+              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "408241b0-14ca-425f-a29a-0b0e82df2c70",
+            "labels": [
+              "Recieve Invoice"
+            ],
+            "source": {
+              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
+            },
+            "target": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "vertices": [
+              {
+                "x": 1692.25,
+                "y": 740
+              }
+            ]
+          },
+          {
             "position": {
               "x": 570,
               "y": 580
@@ -3046,8 +3046,8 @@
                 "text": "Council\nEmployee"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -3061,13 +3061,13 @@
               "description": "A person who works for the company in an admin role for the system.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "39e16596-46cf-410e-9fe4-b1578a3355bb",
                   "title": "Staff credentials could be stolen or guessed",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Someone could obtain or guess the credentials of a council employee, gaining access to the system when they shouldn't.",
@@ -3080,7 +3080,7 @@
                 {
                   "id": "19025147-3702-4cfa-81af-cedfaf3a1799",
                   "title": "Staff member modifies a registration and claims otherwise",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "A staff member with valid credentials could modify a dog's registration in the data store, then claim they didn't modify it.",
@@ -3092,8 +3092,8 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
-                "repudiation": 0
+                "spoofing": 4,
+                "repudiation": 1
               }
             }
           },
