@@ -3246,7 +3246,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.",
-                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convinceing invoice.\n",
+                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convincing invoice. But most people would still be tricked by an official looking invoice even if it was not perfect.\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 115,
@@ -3254,7 +3254,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
