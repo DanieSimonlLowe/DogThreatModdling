@@ -1475,54 +1475,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Pay Registration Invoice",
-              "description": "The dog owner pays for the invoice from their registration with the details listed in the invoice.\n",
-              "outOfScope": true,
-              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "60dd0281-f240-4daf-abc0-b395eabcb784",
-            "labels": [
-              "Pay Registration Invoice"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
-            },
-            "vertices": [
-              {
-                "x": 1400,
-                "y": 1010.5
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Request Tag",
               "description": "The council employee manually requests the tags to be made and shipped to the address that the invoice is related to.\n",
               "outOfScope": true,
@@ -2315,15 +2267,15 @@
               "threats": []
             },
             "id": "7d079810-4c4e-4261-b0ab-178e565ca520",
+            "labels": [
+              "Logs Manage Resistraion"
+            ],
             "source": {
               "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
             },
             "target": {
               "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
-            },
-            "labels": [
-              "Logs Manage Resistraion"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -2357,15 +2309,15 @@
               "threats": []
             },
             "id": "e4a685b5-df21-4b0d-b209-626d5bc4e367",
+            "labels": [
+              "Log Data Base"
+            ],
             "source": {
               "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "target": {
               "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
-            },
-            "labels": [
-              "Log Data Base"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -2399,15 +2351,15 @@
               "threats": []
             },
             "id": "47ff0173-23f4-45b7-b9b6-829a346a8da4",
+            "labels": [
+              "Log registration"
+            ],
             "source": {
               "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "target": {
               "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
-            },
-            "labels": [
-              "Log registration"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -2441,6 +2393,9 @@
               "threats": []
             },
             "id": "b0c93c35-0f94-464a-b5f8-c1db8114f917",
+            "labels": [
+              "Log Mail"
+            ],
             "source": {
               "cell": "fc2db507-c5e6-4513-bccf-768066f4a232"
             },
@@ -2452,9 +2407,6 @@
                 "x": 440,
                 "y": 190
               }
-            ],
-            "labels": [
-              "Log Mail"
             ]
           },
           {
@@ -2595,6 +2547,54 @@
               {
                 "x": 303.75,
                 "y": 960
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Pay Registration Invoice",
+              "description": "The dog owner pays for the invoice from their registration with the details listed in the invoice.\n",
+              "outOfScope": true,
+              "reasonOutOfScope": "The system only indirectly interacts with this as dog owners pay outside the system and council employees check the accounts outside the system.\n",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "60dd0281-f240-4daf-abc0-b395eabcb784",
+            "labels": [
+              "Pay Registration Invoice"
+            ],
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "5cef187f-ed69-498a-81d8-dfe09b582ecf"
+            },
+            "vertices": [
+              {
+                "x": 1400,
+                "y": 1010.5
               }
             ]
           },
@@ -3308,16 +3308,16 @@
           },
           {
             "position": {
-              "x": 1930,
-              "y": 840
+              "x": 1960,
+              "y": 629.999999999999
             },
             "size": {
               "width": 130,
-              "height": 100
+              "height": 70
             },
             "attrs": {
               "text": {
-                "text": "Create \nand Send\nTag"
+                "text": "Tag manufacturing\n and sending system"
               },
               "body": {
                 "stroke": "#333333",
@@ -3326,12 +3326,12 @@
               }
             },
             "visible": true,
-            "shape": "process",
+            "shape": "actor",
             "zIndex": 31,
             "id": "dfce18fd-50f2-4580-8311-35f8defb524d",
             "data": {
-              "type": "tm.Process",
-              "name": "Create \nand Send\nTag",
+              "type": "tm.Actor",
+              "name": "Tag manufacturing\n and sending system",
               "description": "The system for creating and sending the tags to dog owners\n",
               "outOfScope": true,
               "reasonOutOfScope": "The council employee manually requests the tags to be made and shipped out of any of the systems.\n",
@@ -3486,8 +3486,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1",
             "zIndex": 36,
+            "id": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1",
             "data": {
               "type": "tm.Actor",
               "name": "Log DataStore",
