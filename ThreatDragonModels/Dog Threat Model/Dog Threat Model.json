@@ -3217,7 +3217,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Mail Service",
-              "description": "HTTPS webpage endpoint(s) for dog registration.",
+              "description": "Used to send mail.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3246,7 +3246,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.",
-                  "mitigation": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.\n\n\nThe invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information.\n",
+                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convinceing invoice.\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 115,
@@ -3254,7 +3254,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
