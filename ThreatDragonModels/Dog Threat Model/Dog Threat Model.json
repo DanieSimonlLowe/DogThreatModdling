@@ -313,31 +313,271 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "lost dog form",
-              "description": "Form consisting of the owner's email address and dog's name.",
+              "name": "renew invoice",
+              "description": "Personalised email addressed to the owner, with invoice attached as a PDF.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
             },
-            "id": "6cc8a549-0635-402d-9c12-f59e7c8f32d6",
+            "id": "08970db7-2b73-4d20-9e75-c09c97bb228e",
             "labels": [
-              "lost dog form"
+              "renew invoice"
+            ],
+            "source": {
+              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 750
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "confirmation email",
+              "description": "Personalised email addressed to the owner confirming that the dog of specified ID is no longer registered. Includes a link to the registration page.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "89d98b58-17e3-4068-8644-6101244b09a6",
+            "labels": [
+              "confirmation email"
+            ],
+            "source": {
+              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": 910,
+                "y": 750
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "renew invoice details",
+              "description": "Contains details pertinent to the renew registration email invoice that were not obtained in the web form process: full name, pronouns, registration number, and email address.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e1787528-e131-442c-a0b1-5fcc2264c9f9",
+            "labels": [
+              "renew invoice details"
+            ],
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 450
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "terminate email details",
+              "description": "Contains details for personalising the termination confirmation email that were not obtained in the terminate process: the owner's full name and pronouns, and the registration ID.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a0984ecb-cca2-4359-9b30-902b2b4061be",
+            "labels": [
+              "terminate email details"
+            ],
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
+            },
+            "vertices": [
+              {
+                "x": 860,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "termination details",
+              "description": "Contains tag ID and flag for if a dog's registration has been terminated.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e4674566-eb2c-4002-ba74-9b713962184b",
+            "labels": [
+              "termination details"
+            ],
+            "source": {
+              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
+            },
+            "target": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "vertices": [
+              {
+                "x": 780,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "terminate form",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "fab41eba-1d7e-4b0b-b3db-443dac36c74d",
+            "labels": [
+              "terminate form"
             ],
             "source": {
               "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
             "target": {
-              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
+              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
             },
             "vertices": [
               {
-                "x": 980,
-                "y": 830
+                "x": 800,
+                "y": 800
               }
             ]
           },
@@ -413,54 +653,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "lost dog email",
-              "description": "Confirmation email for a lost dog declaration, confirming the dog's last known tag ID.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "8e5048b7-1619-4be0-85e5-f6e2f5c0a67d",
-            "labels": [
-              "lost dog email"
-            ],
-            "source": {
-              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
-            },
-            "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "vertices": [
-              {
-                "x": 1045,
-                "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "found dog details",
               "description": "Contains the dog's tag ID, current status, and possibly the reported sighting address.",
               "outOfScope": false,
@@ -503,8 +695,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "lost dog details",
-              "description": "Contains the owner's email address, dog's name, and status to update to.",
+              "name": "renew details",
+              "description": "Contains both the old and new tag IDs, the new physical address, and a new expiry date. Sets the flag is_paid to false.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -514,20 +706,20 @@
               "protocol": "",
               "threats": []
             },
-            "id": "a8937180-b178-487b-bfc7-67483bf7164f",
+            "id": "fca1da01-6ecd-4d3d-9ecc-4efe61941dc9",
             "labels": [
-              "lost dog details"
+              "renew details"
             ],
             "source": {
-              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
+              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
             },
             "target": {
               "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "vertices": [
               {
-                "x": 960,
-                "y": 540
+                "x": 650,
+                "y": 420
               }
             ]
           },
@@ -551,31 +743,31 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Reqeast Invoice Infomation",
-              "description": "The information for the provided reference that is required to send the tag is retrieved, so the dog ID and the address.",
+              "name": "renew form data",
+              "description": "Form consisting of dog's tag ID and new delivery address.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
             },
-            "id": "5d674e1b-de34-4800-a615-48a3befe21c2",
+            "id": "b57a490f-4135-4530-a8b4-bf3dfb2e88cc",
             "labels": [
-              "Reqeast Invoice Infomation"
+              "renew form data"
             ],
             "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
             "target": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
             },
             "vertices": [
               {
-                "x": 1393.25,
-                "y": 390
+                "x": 660,
+                "y": 750
               }
             ]
           },
@@ -759,6 +951,48 @@
                 "y": 960
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send Fake Invoice",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "748cd052-2be4-42c8-b9e6-f870d58cf071",
+            "labels": [
+              "Send Fake Invoice"
+            ],
+            "source": {
+              "cell": "b013e8fa-926e-42de-858c-aaf27fa61890"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            }
           },
           {
             "shape": "flow",
@@ -1158,48 +1392,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "found dog form",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "270ffe56-6729-4c48-9cfa-5364dd2ba155",
-            "labels": [
-              "found dog form"
-            ],
-            "source": {
-              "cell": "33bfc317-430a-410f-85b8-2229b95eaa3e"
-            },
-            "target": {
-              "cell": "5b9cb350-4ebb-46fd-acac-07fd96e4e0ed"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -1292,24 +1484,74 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "ACK",
+              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
+                  "title": "Spying",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "some one could spy on the infomation while it is in transit.\n",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
+                  "mitigation": "Use HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 56,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 5,
+                "denialOfService": 0
+              }
             },
-            "id": "04f95306-a85e-41ca-8db1-a26ce4663619",
+            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
+            "labels": [
+              "ACK"
+            ],
             "source": {
-              "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "target": {
-              "cell": "f9addc46-2f9b-41cc-a38a-80379ddad8e7"
-            }
+              "x": 600,
+              "y": 960
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 790
+              },
+              {
+                "x": 560,
+                "y": 870
+              },
+              {
+                "x": 580,
+                "y": 920
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1331,8 +1573,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "ack and send tag id",
-              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
+              "name": "Add registration details",
+              "description": "Contains all of the details from the registration form: the human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1340,30 +1582,110 @@
               "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
-            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
+            "id": "81037ae8-4ec3-425e-a1c0-e810a5e79a57",
             "labels": [
-              "ack and send tag id"
+              "Add registration details"
             ],
             "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "target": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "vertices": [
               {
-                "x": 760,
-                "y": 340
+                "x": 451.75,
+                "y": 490
               },
               {
-                "x": 420,
+                "x": 510,
+                "y": 400
+              },
+              {
+                "x": 720,
                 "y": 370
-              },
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "lost dog email",
+              "description": "Confirmation email for a lost dog declaration, confirming the dog's last known tag ID.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4cdbc851-77ff-4d89-94a0-ae90d27ffc5a",
+                  "title": "Intercepted email",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Email could be intercepted and user information could be gained.",
+                  "mitigation": "Ensure that email is sent over a secure connection using TLS and have checksums.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 65,
+                  "score": ""
+                },
+                {
+                  "id": "de998821-6907-4263-a9e8-636e2c0c2f89",
+                  "title": "Modified email",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Email could be modified to add incorrect information or fake links.",
+                  "mitigation": "Ensure that email is sent over a secure connection using TLS and have checksums.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 66,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "8e5048b7-1619-4be0-85e5-f6e2f5c0a67d",
+            "labels": [
+              "lost dog email"
+            ],
+            "source": {
+              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
               {
-                "x": 370,
-                "y": 530
+                "x": 1045,
+                "y": 850
               }
             ]
           },
@@ -1443,56 +1765,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "renew invoice details",
-              "description": "Contains details pertinent to the renew registration email invoice that were not obtained in the web form process: full name, pronouns, registration number, and email address.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "e1787528-e131-442c-a0b1-5fcc2264c9f9",
-            "labels": [
-              "renew invoice details"
-            ],
-            "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "target": {
-              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 450
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Add registration details",
-              "description": "Contains all of the details from the registration form: the human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.",
+              "name": "ack and send tag id",
+              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1500,35 +1774,30 @@
               "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
+              "threats": []
             },
-            "id": "81037ae8-4ec3-425e-a1c0-e810a5e79a57",
+            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
             "labels": [
-              "Add registration details"
+              "ack and send tag id"
             ],
             "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
               "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
-            "target": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
             "vertices": [
               {
-                "x": 451.75,
-                "y": 490
+                "x": 760,
+                "y": 340
               },
               {
-                "x": 510,
-                "y": 400
-              },
-              {
-                "x": 720,
+                "x": 420,
                 "y": 370
+              },
+              {
+                "x": 370,
+                "y": 530
               }
             ]
           },
@@ -1552,8 +1821,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "renew details",
-              "description": "Contains both the old and new tag IDs, the new physical address, and a new expiry date. Sets the flag is_paid to false.",
+              "name": "lost dog details",
+              "description": "Contains the owner's email address, dog's name, and status to update to.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1563,309 +1832,20 @@
               "protocol": "",
               "threats": []
             },
-            "id": "fca1da01-6ecd-4d3d-9ecc-4efe61941dc9",
+            "id": "a8937180-b178-487b-bfc7-67483bf7164f",
             "labels": [
-              "renew details"
+              "lost dog details"
             ],
             "source": {
-              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
+              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
             },
             "target": {
               "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "vertices": [
               {
-                "x": 650,
-                "y": 420
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "confirmation email",
-              "description": "Personalised email addressed to the owner confirming that the dog of specified ID is no longer registered. Includes a link to the registration page.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "5ca55e8e-aad3-41c7-9d30-5caebeb3bfe8",
-                  "title": "Man-in-the-Middle Attack",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Data could be tampered with via a man-in-the-middle attack, altering the re-registration link to direct somewhere else.",
-                  "mitigation": "Ensure the email is sent via TLS.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 72,
-                  "score": ""
-                },
-                {
-                  "id": "505b56b3-7cf3-4689-87dc-582b1ece82b5",
-                  "title": "Data Interception",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "The email could be intercepted, allowing an attacker to obtain the owner's pronouns, full name, and email address.",
-                  "mitigation": "Ensure the email is sent via TLS.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 73,
-                  "score": ""
-                }
-              ]
-            },
-            "id": "89d98b58-17e3-4068-8644-6101244b09a6",
-            "labels": [
-              "confirmation email"
-            ],
-            "source": {
-              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
-            },
-            "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "vertices": [
-              {
-                "x": 910,
-                "y": 750
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "termination details",
-              "description": "Contains tag ID and flag for if a dog's registration has been terminated.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "e4674566-eb2c-4002-ba74-9b713962184b",
-            "labels": [
-              "termination details"
-            ],
-            "source": {
-              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
-            },
-            "target": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "vertices": [
-              {
-                "x": 780,
-                "y": 460
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "terminate email details",
-              "description": "Contains details for personalising the termination confirmation email that were not obtained in the terminate process: the owner's full name and pronouns, and the registration ID.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "a0984ecb-cca2-4359-9b30-902b2b4061be",
-            "labels": [
-              "terminate email details"
-            ],
-            "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "target": {
-              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
-            },
-            "vertices": [
-              {
-                "x": 860,
-                "y": 510
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send Fake Invoice",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "748cd052-2be4-42c8-b9e6-f870d58cf071",
-            "labels": [
-              "Send Fake Invoice"
-            ],
-            "source": {
-              "cell": "b013e8fa-926e-42de-858c-aaf27fa61890"
-            },
-            "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "terminate form data",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "604a7ddc-9ef1-411f-8948-e8a858cc1acf",
-                  "title": "Data Interception",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Form data could be intercepted, allowing an attacker to obtain the sender's email address.",
-                  "mitigation": "Use HTTPS to encrypt the form data.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 69,
-                  "score": ""
-                },
-                {
-                  "id": "1dbfab2c-728d-4dcf-9be1-a28b953b9a91",
-                  "title": "Flooding Attack",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "Attackers could flood the termination form page with illegitimate requests, denying its use by legitimate actors.",
-                  "mitigation": "Rate limit the number of form requests accepted per IP address. Implement a captcha test before forms can be sent. Filter requests upstream using an external protection service, such as Amazon Shield or Cloudflare to check packets against known attacker addresses.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 70,
-                  "score": ""
-                }
-              ]
-            },
-            "id": "fab41eba-1d7e-4b0b-b3db-443dac36c74d",
-            "labels": [
-              "terminate form dat"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "b3a56483-7ae4-41c2-8423-f2d274cd0479"
-            },
-            "vertices": [
-              {
-                "x": 800,
-                "y": 800
+                "x": 960,
+                "y": 540
               }
             ]
           },
@@ -1990,161 +1970,31 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "ACK",
-              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
+              "name": "Reqeast Invoice Infomation",
+              "description": "The information for the provided reference that is required to send the tag is retrieved, so the dog ID and the address.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
-                  "title": "Spying",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "some one could spy on the infomation while it is in transit.\n",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                },
-                {
-                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
-                  "title": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
-                  "mitigation": "Use HTTPS",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 56,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 5,
-                "denialOfService": 0
-              }
+              "threats": []
             },
-            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
+            "id": "5d674e1b-de34-4800-a615-48a3befe21c2",
             "labels": [
-              "ACK"
+              "Reqeast Invoice Infomation"
             ],
             "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
             "target": {
-              "x": 600,
-              "y": 950
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
             },
             "vertices": [
               {
-                "x": 520,
-                "y": 790
-              },
-              {
-                "x": 560,
-                "y": 870
-              },
-              {
-                "x": 580,
-                "y": 920
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "renew form data",
-              "description": "Form consisting of dog's tag ID and new delivery address.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "8528b763-1659-4c13-9d3a-0ffef4ae0197",
-                  "title": "Data Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "A man-in-the-middle attacker could tamper with the form data, altering the physical address field to send it to.",
-                  "mitigation": "Use HTTPS to encrypt the form data, and send the form data with a generated hash to ensure it hasn't been tampered.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 64,
-                  "score": ""
-                },
-                {
-                  "id": "fcda0c55-05d8-43d4-bb99-2db22efc67cc",
-                  "title": "Data interception",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "An attacker could intercept the data sent, obtaining the sender's physical address and tag ID.",
-                  "mitigation": "Use HTTPS to encrypt the data.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 65,
-                  "score": ""
-                },
-                {
-                  "id": "d60e1f5b-a1c9-403e-ab51-2dffaa572b38",
-                  "title": "Flooding Attack",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "An attacker could flood the renew registration page with illegitimate form requests, denying its use by legitimate actors.",
-                  "mitigation": "Rate limit the number of form requests accepted per IP address. Implement a captcha test before forms can be sent. Filter requests upstream using an external protection service, such as Amazon Shield or Cloudflare to check packets against known attacker addresses.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 66,
-                  "score": ""
-                }
-              ]
-            },
-            "id": "b57a490f-4135-4530-a8b4-bf3dfb2e88cc",
-            "labels": [
-              "renew form data"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
-            },
-            "vertices": [
-              {
-                "x": 660,
-                "y": 750
+                "x": 1393.25,
+                "y": 390
               }
             ]
           },
@@ -2168,8 +2018,175 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "renew invoice",
-              "description": "Personalised email addressed to the owner, with invoice attached as a PDF.",
+              "name": "lost dog form",
+              "description": "Form consisting of the owner's email address and dog's name.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "09d8a469-8457-473a-9614-ec12577c5089",
+                  "title": "Flood of fake form requests",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "If too many fake form requests are made the servers could get overwhelmed and limit actual users.",
+                  "mitigation": "Rate limit the number of form requests per user IP.\nLimit the amount a dog can be lost to once an hour.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 63,
+                  "score": ""
+                },
+                {
+                  "id": "9783b17b-e010-4672-868d-473904339ae5",
+                  "title": "Man in the middle attack",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Form data could be altered with a man in the middle attack allowing for wrong information of dog being lost or for code to be added into the form.",
+                  "mitigation": "Ensure that HTTPS is used to encrypt the data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 64,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "6cc8a549-0635-402d-9c12-f59e7c8f32d6",
+            "labels": [
+              "lost dog form"
+            ],
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "b9288f98-11fa-4c59-9a38-a295a750eaef"
+            },
+            "vertices": [
+              {
+                "x": 980,
+                "y": 830
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Lost dog notification",
+              "description": "Notifies animal control about lost dogs and any information on them.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "339d3a5e-f9e5-431b-ac4f-e76982f757ea",
+                  "title": "Information sent to more people",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Information sent to people in animal control who will not be dealing with the form.",
+                  "mitigation": "Have the notification only sent to persons who will be collecting the dog",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 75,
+                  "score": ""
+                },
+                {
+                  "id": "5e2c07f4-5d5b-4686-957d-a84b999e7ba7",
+                  "title": "Flooded with fake notifications",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "If to many fake notifications are sent then animal control won't be able to accurately collect dogs.",
+                  "mitigation": "Rate limit the number of form requests per user IP.\nLimit the amount a dog can be lost to once an hour.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 76,
+                  "score": ""
+                },
+                {
+                  "id": "d1fae603-c812-4b04-9958-cda0867c9be6",
+                  "title": "Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Man in the middle attack could be done if their is an insecure connection and could alter the information sent to animal control.",
+                  "mitigation": "Ensure that HTTPS is used to encrypt the data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 77,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "04f95306-a85e-41ca-8db1-a26ce4663619",
+            "source": {
+              "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
+            },
+            "target": {
+              "cell": "f9addc46-2f9b-41cc-a38a-80379ddad8e7"
+            },
+            "vertices": [
+              {
+                "x": 1430,
+                "y": 240
+              },
+              {
+                "x": 1450,
+                "y": 230
+              }
+            ],
+            "labels": [
+              "Lost dog notification"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "found dog form",
+              "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -2177,51 +2194,18 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "a28af258-6425-4d0d-9c40-635393652df5",
-                  "title": "Interception of Data",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Email could be intercepted by an attacker, granting them access to the registration owner's pronouns, full name, and email address.",
-                  "mitigation": "Ensure the email is sent via TLS.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 67,
-                  "score": ""
-                },
-                {
-                  "id": "a84ea9d0-6f5d-4e82-83e8-fb95ac4021eb",
-                  "title": "Man-in-the-Middle Attack",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Data could be tampered with via a man-in-the-middle attack, altering the invoice details, such as amount owed, or the bank account (i.e., if the invoice contains the account number, the number could be altered. If the invoice or email instead contains instructions on where to find the account number, these instructions could be altered, perhaps to point to a spoofed website).\nThe PDF could also be altered to contain malicious executable code.",
-                  "mitigation": "Ensure the email is sent via TLS.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 68,
-                  "score": ""
-                }
-              ]
+              "threats": []
             },
-            "id": "08970db7-2b73-4d20-9e75-c09c97bb228e",
+            "id": "270ffe56-6729-4c48-9cfa-5364dd2ba155",
             "labels": [
-              "renew invoice"
+              "found dog form"
             ],
             "source": {
-              "cell": "22b104b5-98ac-45a3-9b15-539274c78fbe"
+              "cell": "33bfc317-430a-410f-85b8-2229b95eaa3e"
             },
             "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "vertices": [
-              {
-                "x": 730,
-                "y": 750
-              }
-            ]
+              "cell": "5b9cb350-4ebb-46fd-acac-07fd96e4e0ed"
+            }
           },
           {
             "position": {
@@ -2237,8 +2221,8 @@
                 "text": "Renew\nRegistration"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2252,91 +2236,12 @@
               "description": "HTTPS webpage endpoint(s) for renewing a dog's registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": [
-                {
-                  "id": "fe41a354-5932-480c-bcd6-0aaa8d77ef94",
-                  "title": "Website Spoofing",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Someone could create a fake version of this website, causing people to give their information to the wrong people.",
-                  "mitigation": "- Prioritise shorter URLs\n- Purchase and redirect from similar domains",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 76,
-                  "score": ""
-                },
-                {
-                  "id": "f2a77d8f-a384-4fe8-9560-03d78fa65c7c",
-                  "title": "False Information",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Spoofing",
-                  "description": "Users could provide incorrect renewal details, such as an invalid address.",
-                  "mitigation": "Validate addresses syntactically and through a location API.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 78,
-                  "score": ""
-                },
-                {
-                  "id": "feff4857-f5c7-498b-a673-254d9e9cc7e6",
-                  "title": "Claim against renewal",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Repudiation",
-                  "description": "Owners could claim they hadn't performed a registration renewal when they had.",
-                  "mitigation": "- Log all renewal actions to the system. Include relevant information about the request, i.e., IP address, time/date",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 79,
-                  "score": ""
-                },
-                {
-                  "id": "6f389948-2fb3-46fb-a776-5b57f35f5f59",
-                  "title": "Data Interception",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "See renew form data",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 80,
-                  "score": ""
-                },
-                {
-                  "id": "d0c80341-4296-492f-9d9d-d3496129d202",
-                  "title": "Data Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "See renew form data",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 83,
-                  "score": ""
-                },
-                {
-                  "id": "f2b99d0b-1b5e-4022-87b4-1068dd89ff8f",
-                  "title": "Flooding Attack",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "See renew form data",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 84,
-                  "score": ""
-                }
-              ]
+              "threats": []
             }
           },
           {
@@ -2353,8 +2258,8 @@
                 "text": "Terminate\nRegistration"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2368,78 +2273,12 @@
               "description": "HTTPS webpage endpoint(s) for terminating a dog's registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": [
-                {
-                  "id": "96ca3850-82e2-42ec-a58e-be7ba5b3462e",
-                  "title": "Website Spoofing",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Someone could create a fake version of this website, causing people to give their information to the wrong people.",
-                  "mitigation": "- Prioritise shorter URLs\n- Purchase and redirect from similar domains",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 85,
-                  "score": ""
-                },
-                {
-                  "id": "8d058521-8813-4cc8-9dff-eac5a47f84d8",
-                  "title": "False Information",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Spoofing",
-                  "description": "Users could provide incorrect renewal details, such as an invalid address.",
-                  "mitigation": "Validate addresses syntactically and through a location API.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 86,
-                  "score": ""
-                },
-                {
-                  "id": "f442619c-a2a6-4a52-a3a8-20f3e94d5466",
-                  "title": "Claim against renewal",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Repudiation",
-                  "description": "Owners could claim they hadn't performed a registration termination when they had.",
-                  "mitigation": "- Log all termination actions to the system. Include relevant information about the request, i.e., IP address, time/date",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 87,
-                  "score": ""
-                },
-                {
-                  "id": "9a6c444a-bd39-47c0-aa6c-b64220ae832b",
-                  "title": "Data Interception",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "See terminate form data",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 88,
-                  "score": ""
-                },
-                {
-                  "id": "4237383b-4559-42e3-a6e6-2aa324de6539",
-                  "title": "Flooding Attack",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "See terminate form data",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 89,
-                  "score": ""
-                }
-              ]
+              "threats": []
             }
           },
           {
@@ -2456,8 +2295,8 @@
                 "text": "Declare Lost\nDog"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2471,12 +2310,65 @@
               "description": "HTTPS webpage endpoint(s) for declaring a dog as lost.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b42b6dd9-0063-441c-a7b6-92c677991fd8",
+                  "title": "Fake dog owner",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Someone else fills a fake form that a dog has been lost.",
+                  "mitigation": "Have a login system for dog owners.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 67,
+                  "score": ""
+                },
+                {
+                  "id": "eb1eedcd-160e-4616-a47e-8956e83e9aa3",
+                  "title": "Inserted code",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Code could be inserted into the form for the server to run.",
+                  "mitigation": "Check the form inputs for any code.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 68,
+                  "score": ""
+                },
+                {
+                  "id": "c5b6069d-451d-4205-900f-1a7fade86a7f",
+                  "title": "Claim against reporting lost",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Declares a dog lost and then claims later that they did not.",
+                  "mitigation": "To log the IP date and time when someone claims a dog lost.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 69,
+                  "score": ""
+                },
+                {
+                  "id": "b46e5cb8-d82e-471d-93fc-6ce2e93a2618",
+                  "title": "Too many requests",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "If too many requests are sent then the servers get overwhelmed and not be able to handle more lost dogs.",
+                  "mitigation": "Rate limit the number of form requests per user IP.\nLimit the amount a dog can be lost to once an hour.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 70,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -2513,7 +2405,47 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c4fa64d1-d148-493d-a785-acd6b96e751c",
+                  "title": "Fake information",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Someone gives fake information about a found dog",
+                  "mitigation": "Check for a real address.\nLog who makes claims and blacklist multiple fake reports.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 78,
+                  "score": ""
+                },
+                {
+                  "id": "52264d03-126e-4321-8b6e-02f74cfdc367",
+                  "title": "Inserted code",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Code could be inserted into the form for the server to run.",
+                  "mitigation": "Check the form inputs for any code.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 79,
+                  "score": ""
+                },
+                {
+                  "id": "5aea22cb-aff3-4901-ae57-0dcbf83e3b9b",
+                  "title": "Claim against finding dog",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Claims they did not make a report for finding a dog.",
+                  "mitigation": "To log the IP date and time when someone claims to find a dog lost.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 80,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -2564,8 +2496,8 @@
                 "text": "Council\nEmployee"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2579,33 +2511,20 @@
               "description": "A person who works for the company in an admin role for the system.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "bc90fd83-68a1-4c04-9581-b9d3ee035962",
-                  "title": "Staff credentials could be stolen or guessed",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "type": "Spoofing",
-                  "description": "Someone could obtain or guess the credentials of a council employee, gaining access to the system when they shouldn't.",
-                  "mitigation": "Enforce strong password rules (for length and character types, i.e., special characters). Block the use of common passwords and phrases. Require two-factor authentication for logging in. Periodically enforce changing passwords, and disallow the use of previous passwords. Automatically expire user sessions after a period of inactivity (i.e., 30 minutes), and after a total elapsed period (i.e., 8 hours). Consider funding and distributing to staff members an external password service, and educate about its usage.",
+                  "description": "Some one could log in as an employee.\n",
+                  "mitigation": "Have long secure passwords that must change every month and make it so that employees can only access the system localy",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 49,
-                  "score": ""
-                },
-                {
-                  "id": "55cc5f2e-46a9-4653-8592-910b09673f25",
-                  "title": "Staff member modifies a registration and claims otherwise",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "A staff member with valid credentials could modify a dog's registration in the data store, then claim they didn't modify it.",
-                  "mitigation": "Log all database transactions and employee logins to a file. Include the details of any transaction performed, along with other relevant information, such as the user who performed it and the time and date it occurred.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 63,
                   "score": ""
                 }
               ],
@@ -2906,11 +2825,11 @@
               "threats": [
                 {
                   "id": "bb712146-3a7d-45de-a8c1-9dec5c7689ef",
-                  "title": "Fake Invoice",
+                  "title": "New STRIDE threat",
                   "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
-                  "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.",
+                  "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.\n",
                   "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot there tag id they would still need there other infomation.\n",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2992,7 +2911,34 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6317763b-6b1d-4782-992a-ea199139faee",
+                  "title": "Fake user",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Another person gains access to a animal controllers account",
+                  "mitigation": "Implement a multifactor login system\nEnforce strong password polices",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 73,
+                  "score": ""
+                },
+                {
+                  "id": "da0a9d56-fc67-4dd6-9d04-d8acdd75cdd0",
+                  "title": "False claims",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Claim that a dog has been collected when it has not been. Or claim a dog is still missing when it has been found.",
+                  "mitigation": "Log when user signs in and out and what they interact with.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 74,
+                  "score": ""
+                }
+              ]
             }
           }
         ]
@@ -3000,6 +2946,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 91
+    "threatTop": 80
   }
 }
