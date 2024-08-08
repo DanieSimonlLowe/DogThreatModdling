@@ -205,13 +205,11 @@
                 "text": "Dog Datastore"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -225,7 +223,7 @@
               "description": "Stores information relating to dog entities known under the council.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -287,7 +285,7 @@
                 {
                   "id": "d9b4c12a-0e07-41ee-91ca-fa9108577261",
                   "title": "Repudiation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "Someone could make a change or update to the database and claim that they did not in the future.",
@@ -300,7 +298,7 @@
               ],
               "threatFrequency": {
                 "tampering": 5,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 5,
                 "denialOfService": 2
               }
