@@ -194,7 +194,7 @@
           {
             "position": {
               "x": 840,
-              "y": 340
+              "y": 349.999999999999
             },
             "size": {
               "width": 150,
@@ -2551,6 +2551,48 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Logs Manage Resistraion",
+              "description": "Contains all actions taken while managing the registration.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "7d079810-4c4e-4261-b0ab-178e565ca520",
+            "source": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "target": {
+              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+            },
+            "labels": [
+              "Logs Manage Resistraion"
+            ]
+          },
+          {
             "position": {
               "x": 570,
               "y": 580
@@ -3419,8 +3461,8 @@
           },
           {
             "position": {
-              "x": 738,
-              "y": 90
+              "x": 670,
+              "y": 70
             },
             "size": {
               "width": 112.5,
