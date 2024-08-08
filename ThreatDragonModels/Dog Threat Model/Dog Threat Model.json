@@ -283,11 +283,24 @@
                   "new": false,
                   "number": 50,
                   "score": ""
+                },
+                {
+                  "id": "d9b4c12a-0e07-41ee-91ca-fa9108577261",
+                  "title": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Someone could make a change or update to the database and claim that they did not in the future.",
+                  "mitigation": "Log all requests with the database.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 117,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 5,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 4,
                 "denialOfService": 2
               }
@@ -697,123 +710,6 @@
               {
                 "x": 1580,
                 "y": 590
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Add registration details",
-              "description": "Contains all of the details from the registration form: the human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "id": "81037ae8-4ec3-425e-a1c0-e810a5e79a57",
-            "labels": [
-              "Add registration details"
-            ],
-            "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "target": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "vertices": [
-              {
-                "x": 451.75,
-                "y": 490
-              },
-              {
-                "x": 510,
-                "y": 400
-              },
-              {
-                "x": 720,
-                "y": 370
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "ack and send tag id",
-              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
-            "labels": [
-              "ack and send tag id"
-            ],
-            "source": {
-              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
-            },
-            "target": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "vertices": [
-              {
-                "x": 760,
-                "y": 340
-              },
-              {
-                "x": 420,
-                "y": 370
-              },
-              {
-                "x": 370,
-                "y": 530
               }
             ]
           },
@@ -2408,6 +2304,123 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ack and send tag id",
+              "description": "acknowledges that a regulation was successful and gets the generated unique dog ID\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b3d3c460-1b0e-434b-a6c2-e09820ebc3b2",
+            "labels": [
+              "ack and send tag id"
+            ],
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": 340
+              },
+              {
+                "x": 420,
+                "y": 370
+              },
+              {
+                "x": 370,
+                "y": 530
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Add registration details",
+              "description": "Contains all of the details from the registration form: the human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "81037ae8-4ec3-425e-a1c0-e810a5e79a57",
+            "labels": [
+              "Add registration details"
+            ],
+            "source": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "target": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "vertices": [
+              {
+                "x": 451.75,
+                "y": 490
+              },
+              {
+                "x": 510,
+                "y": 400
+              },
+              {
+                "x": 720,
+                "y": 370
+              }
+            ]
+          },
+          {
             "position": {
               "x": 570,
               "y": 580
@@ -3279,6 +3292,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 116
+    "threatTop": 117
   }
 }
