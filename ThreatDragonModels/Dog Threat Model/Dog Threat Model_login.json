@@ -32,11 +32,11 @@
         "cells": [
           {
             "position": {
-              "x": -280.0000000000009,
-              "y": 29.99999999999534
+              "x": -430.00000000000114,
+              "y": 29.99999999999352
             },
             "size": {
-              "width": 2160,
+              "width": 2310,
               "height": 700
             },
             "shape": "trust-boundary-box",
@@ -202,7 +202,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Dog Datastore"
+                "text": "Dog/User Datastore"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -219,8 +219,8 @@
             "id": "4b55e8bf-facd-41e5-af05-a13ca80e9464",
             "data": {
               "type": "tm.Store",
-              "name": "Dog Datastore",
-              "description": "Stores information relating to dog entities known under the council.",
+              "name": "Dog/User Datastore",
+              "description": "Stores information relating to dog and user entities known under the council.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -914,6 +914,10 @@
               {
                 "x": 910,
                 "y": 750
+              },
+              {
+                "x": 810,
+                "y": 850
               }
             ]
           },
@@ -2379,54 +2383,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Attempt Login",
-              "description": "The users username and password are sent(hashed) and checked agenst the data base to see if there is a match",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "96839960-4b4b-4550-a7e4-4df7dd0340ef",
-            "labels": [
-              "Attempt Login"
-            ],
-            "source": {
-              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
-            },
-            "target": {
-              "cell": "dcc1f2a7-9eb0-4711-bc7f-6b74d5dd640e"
-            },
-            "vertices": [
-              {
-                "x": 140,
-                "y": 410
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Ack login",
               "description": "Sends if the login was successfull or not for the user",
               "outOfScope": false,
@@ -2897,13 +2853,336 @@
             },
             "vertices": [
               {
-                "x": 490,
-                "y": 1240
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "x": 360,
+                "y": 1180
               },
               {
                 "x": -130.5,
                 "y": 1140
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Attempt Regstration",
+              "description": "Contains the users ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "51b3eee5-e8e8-4bfa-a54e-c187566966ae",
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "vertices": [
+              {
+                "x": 160,
+                "y": 1010
+              }
+            ],
+            "labels": [
+              "Attempt Regstration"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "f24c0e6e-92e7-4bbb-bc74-c2f51a82a64a",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
+            },
+            "vertices": [
+              {
+                "x": 150,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Phone",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "70c126f6-311a-4124-bfea-d356ca7961f6",
+            "source": {
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
+            },
+            "target": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "labels": [
+              "Ack Phone"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Make Call",
+              "description": "The phone call that is make to the person",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6ae7d35b-0bdd-4bae-a182-96de3c25d27b",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "Use secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 131,
+                  "score": ""
+                },
+                {
+                  "id": "6a7b8ae9-b452-40da-ac5f-c1f78a49ffed",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Someone could do a man-in-the middle attack and view the data while it is in transit.",
+                  "mitigation": "\nUse secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 132,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "124239da-2b81-40bd-a712-95ac51dcf4cc",
+            "source": {
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": -230,
+                "y": 1150
+              },
+              {
+                "x": 250,
+                "y": 1360
+              },
+              {
+                "x": 540,
+                "y": 1190
+              },
+              {
+                "x": 570,
+                "y": 1150
+              }
+            ],
+            "labels": [
+              "Make Call"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Phone",
+              "description": "Sends infomation that the user pressed the # sysmbol and confirmed the login",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2d050fc0-2b50-4c5b-b5e8-0f3cdbd8f9e0",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
+                  "mitigation": "Use secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 133,
+                  "score": ""
+                },
+                {
+                  "id": "9cd444df-8bb0-4c7c-a55e-8cd2655be38d",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could do a man-in-the middle attack and view  the data while it is in transit.",
+                  "mitigation": "Use secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 134,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "4e6a4881-2598-4e60-8f22-64c5094fefd1",
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
+            },
+            "vertices": [
+              {
+                "x": 636.25,
+                "y": 1030
+              },
+              {
+                "x": 600,
+                "y": 1180
+              },
+              {
+                "x": 350,
+                "y": 1420
+              },
+              {
+                "x": -370,
+                "y": 1130
+              }
+            ],
+            "labels": [
+              "Ack Phone"
             ]
           },
           {
@@ -2965,7 +3244,7 @@
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -3010,8 +3289,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "Attempt Login",
+              "description": "The users username and password are sent(hashed) and checked agenst the data base to see if there is a match",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -3021,21 +3300,25 @@
               "protocol": "",
               "threats": []
             },
-            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
+            "id": "96839960-4b4b-4550-a7e4-4df7dd0340ef",
+            "labels": [
+              "Attempt Login"
+            ],
             "source": {
-              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
             },
             "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+              "x": 830,
+              "y": 370
             },
             "vertices": [
               {
-                "x": -20,
-                "y": 930
+                "x": -10,
+                "y": 460
               },
               {
-                "x": 130,
-                "y": 1070
+                "x": 140,
+                "y": 410
               }
             ]
           },
@@ -3059,7 +3342,56 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Ack Registraion",
+              "description": "Ack if the registration was successful or not.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "55cd015a-4f7d-4f88-984f-32d7c783549e",
+            "source": {
+              "x": 820,
+              "y": 370
+            },
+            "target": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 470
+              }
+            ],
+            "labels": [
+              "Ack Registraion"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ACK phone",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -3070,18 +3402,173 @@
               "protocol": "",
               "threats": []
             },
-            "id": "51b3eee5-e8e8-4bfa-a54e-c187566966ae",
+            "id": "0bfa74a1-b1ed-4e9f-a43c-aadbb05862f0",
             "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
             },
             "target": {
               "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
             },
             "vertices": [
               {
-                "x": 220,
-                "y": 960
+                "x": -220,
+                "y": 440
               }
+            ],
+            "labels": [
+              "ACK phone"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack login",
+              "description": "Ack if the login was successful or not.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "0c39bb9a-ff5d-491e-8168-811bfeb9cc21",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 270
+              },
+              {
+                "x": -10,
+                "y": 300
+              },
+              {
+                "x": -230,
+                "y": 280
+              },
+              {
+                "x": -310,
+                "y": 360
+              },
+              {
+                "x": -370,
+                "y": 490
+              },
+              {
+                "x": -250,
+                "y": 580
+              }
+            ],
+            "labels": [
+              "Ack login"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Registration",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "72d5c475-6022-4ef9-a5e7-2327b799d01e",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 135,
+                  "score": ""
+                },
+                {
+                  "id": "ac02dfd3-d7d3-45ea-9965-945da8f0a13e",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could spy on the information while it is in transit.",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 136,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
+            "source": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": -20,
+                "y": 930
+              },
+              {
+                "x": 130,
+                "y": 1070
+              }
+            ],
+            "labels": [
+              "Ack Registration"
             ]
           },
           {
@@ -3710,8 +4197,8 @@
                 "text": "Notifcation Service"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -3725,7 +4212,7 @@
               "description": "Used to notify user of changes invoices.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
@@ -3747,11 +4234,11 @@
                 {
                   "id": "d042589e-a8d4-4e9e-89b8-d1d955c9a5cc",
                   "title": "Fake Invoice",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.",
-                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convincing invoice. But most people would still be tricked by an official looking invoice even if it was not perfect.\n",
+                  "mitigation": "The invoices are sent using the internal system so they would need access to the system to do this.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 115,
@@ -3759,11 +4246,11 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 5,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -4065,7 +4552,29 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a3f3aa10-5932-406f-a164-0e799787b49c",
+                  "title": " Flood Endpoint",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Someone could flood the endpoint with fake login attempts to force the endpoint down.",
+                  "mitigation": "Use IP blocking to prevent one address from being repeatedly used.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 137,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4095,6 +4604,103 @@
               "type": "tm.Process",
               "name": "User Login",
               "description": "Used to log users in",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "1c9067c1-b377-4dc1-ba46-2c1c433e206b",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Someone could create a fake version of this website, causing people to give their information to the wrong people.",
+                  "mitigation": "\n- Prioritise shorter URLs\n- Purchase and redirect from similar domains",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 125,
+                  "score": ""
+                },
+                {
+                  "id": "ec8ee377-61bb-48b5-8f9b-103cc1919e52",
+                  "title": "Fake login",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Someone could log in as someone else.",
+                  "mitigation": "All passwords are required to be at least 8 characters long and contain a number, letter, and special charter.\n\nUse a CAPTCHA to prevent them from automating it.\n\nReqiure two factor authencation of the phone call\nFrom M1036\nSet account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. (Use 3 attempts and 10 minites before the next allowed attempt from the IP address or for that specific account.)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 126,
+                  "score": ""
+                },
+                {
+                  "id": "686e7f95-75fb-435d-be17-1aa76c7a469a",
+                  "title": "Flood Endpoint",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Some one could flood the endpoint with fake login attempts to force the end point down.",
+                  "mitigation": "Use IP blocking to prevent one address from being repetedly used.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 127,
+                  "score": ""
+                },
+                {
+                  "id": "f4c634be-884a-4b68-86a4-abd7c17703a9",
+                  "title": "Flood User acount.",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Someone could repeatly fake attempting to login in to an account to trick the system into makeing that account not useable.",
+                  "mitigation": "Use a CAPTCHA to prevent them from automating it and block IP addresses that repeatedly attempt to login to the same account.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 128,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 6,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 5,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -430.00000000000114,
+              "y": 580
+            },
+            "size": {
+              "width": 150,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Phone \nConfirmation \nSystem"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "a574484e-41ae-4a19-834e-c531c354f38f",
+            "data": {
+              "type": "tm.Process",
+              "name": "Phone \nConfirmation \nSystem",
+              "description": "rings someones phone and reqires them to press the # for them to login to there account.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -4164,13 +4770,14 @@
                 "denialOfService": 5,
                 "elevationOfPrivilege": 0
               }
-            }
+            },
+            "zIndex": 39
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 130
+    "threatTop": 137
   }
 }
