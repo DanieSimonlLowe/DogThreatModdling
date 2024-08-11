@@ -297,7 +297,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 5,
+                "tampering": 6,
                 "repudiation": 2,
                 "informationDisclosure": 6,
                 "denialOfService": 2
@@ -2391,6 +2391,9 @@
               "threats": []
             },
             "id": "96839960-4b4b-4550-a7e4-4df7dd0340ef",
+            "labels": [
+              "Attempt Login"
+            ],
             "source": {
               "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
             },
@@ -2402,9 +2405,6 @@
                 "x": 140,
                 "y": 410
               }
-            ],
-            "labels": [
-              "Attempt Login"
             ]
           },
           {
@@ -2439,6 +2439,9 @@
               "threats": []
             },
             "id": "1a6ebf2c-0e70-4419-9ad6-51b0e532935e",
+            "labels": [
+              "Ack login"
+            ],
             "source": {
               "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
             },
@@ -2450,9 +2453,6 @@
                 "x": 110,
                 "y": 350
               }
-            ],
-            "labels": [
-              "Ack login"
             ]
           },
           {
@@ -2487,6 +2487,9 @@
               "threats": []
             },
             "id": "ab472359-b7fe-4239-b522-2382cad49d97",
+            "labels": [
+              "Log User login attempt"
+            ],
             "source": {
               "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
             },
@@ -2498,9 +2501,6 @@
                 "x": 20,
                 "y": 220
               }
-            ],
-            "labels": [
-              "Log User login attempt"
             ]
           },
           {
@@ -2535,6 +2535,9 @@
               "threats": []
             },
             "id": "5e20be5d-d9c4-48ca-8c7b-91435d00085c",
+            "labels": [
+              "Update database with found dog"
+            ],
             "source": {
               "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
             },
@@ -2550,9 +2553,6 @@
                 "x": 1000,
                 "y": 290
               }
-            ],
-            "labels": [
-              "Update database with found dog"
             ]
           },
           {
@@ -2886,6 +2886,9 @@
               }
             },
             "id": "4c0e2fb2-512d-42d9-862a-65f6e52627d2",
+            "labels": [
+              "attempt login"
+            ],
             "source": {
               "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
@@ -2901,9 +2904,6 @@
                 "x": -130.5,
                 "y": 1140
               }
-            ],
-            "labels": [
-              "attempt login"
             ]
           },
           {
@@ -2970,6 +2970,9 @@
               }
             },
             "id": "82dc24f3-78df-43a8-8260-7a733df49b70",
+            "labels": [
+              "Ack Login"
+            ],
             "source": {
               "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
             },
@@ -2985,9 +2988,6 @@
                 "x": 210,
                 "y": 1170
               }
-            ],
-            "labels": [
-              "Ack Login"
             ]
           },
           {
@@ -3981,6 +3981,14 @@
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "strokeDasharray": null
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -3993,23 +4001,34 @@
               "description": "Stores all logs for the system",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "97053c38-f60e-4e54-8fc8-1dd67b543e74",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
+                  "title": "Injection Tampering",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "type": "Tampering",
+                  "description": "Injection attacks could be used to change the database's information.",
+                  "mitigation": "- Follow industry practices for sanitising input\n- Ensure all libraries used are up-to-date and screened for CSE vulnerabilities\n- Create frequent backups of the database and store them externally",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 130,
                   "score": ""
                 }
-              ]
+              ],
+              "isALog": null,
+              "storesCredentials": null,
+              "isEncrypted": null,
+              "isSigned": null,
+              "storesInventory": null,
+              "threatFrequency": {
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {

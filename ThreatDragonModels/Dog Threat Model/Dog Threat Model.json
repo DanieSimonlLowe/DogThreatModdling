@@ -3467,7 +3467,32 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "97053c38-f60e-4e54-8fc8-1dd67b543e74",
+                  "title": "Injection Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Injection attacks could be used to change the database's information.",
+                  "mitigation": "- Follow industry practices for sanitising input\n- Ensure all libraries used are up-to-date and screened for CSE vulnerabilities\n- Create frequent backups of the database and store them externally",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 130,
+                  "score": ""
+                }
+              ],
+              "isALog": null,
+              "storesCredentials": null,
+              "isEncrypted": null,
+              "isSigned": null,
+              "storesInventory": null,
+              "threatFrequency": {
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           }
         ]
