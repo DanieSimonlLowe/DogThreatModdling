@@ -69,8 +69,8 @@
                 "text": "Dog Owner"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -84,9 +84,23 @@
               "description": "A person who legally owns one or more dogs and is in the council's range of authority, so wants to register their dog or manage their already existing regulations.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "a5aab34e-e979-4637-8c6e-9ff80bc4db8f",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 119,
+                  "score": ""
+                }
+              ],
               "threatFrequency": {
                 "spoofing": 9,
                 "repudiation": 4
@@ -135,7 +149,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Someone could enter fake information, meaning the authorities no longer know who owns the dog, or if the dog even exists.",
-                  "mitigation": "- Use a system like Real Me to verify the person's identity.\n- Make people send a photo of them self holding photo ID\n- Check the email address/physical address are legitimate (filter for common fake subdomains)",
+                  "mitigation": "(Not implemented)\n- Use a system like Real Me to verify the person's identity.\n- Make people send a photo of them self holding photo ID\n- Check the email address/physical address are legitimate (filter for common fake subdomains)",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 12,
@@ -144,7 +158,7 @@
                 {
                   "id": "7be99b0d-4aa7-4e2e-842e-d2b0a96730e4",
                   "title": "Claim against Registration",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "Owner performs registration, then claims they didn't register any such dog.",
@@ -157,7 +171,7 @@
                 {
                   "id": "9de7e80c-a490-44c3-8cd0-0717add131a7",
                   "title": "Website spoofing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Someone could create a fake version of this website, causing people to give their information to the wrong people.",
@@ -169,8 +183,8 @@
                 },
                 {
                   "id": "79cc0bda-5678-41c0-bc92-2db3465603a2",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
+                  "title": "Denial of service",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Someone could flood the end point with fake applications, which causes real applications to be missed as it overwhelms the server.",
@@ -182,11 +196,11 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 7,
+                "spoofing": 11,
                 "tampering": -1,
-                "repudiation": 3,
+                "repudiation": 4,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
             }
@@ -2466,6 +2480,59 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Notify Invoice Received",
+              "description": "The employee notifies the system that they have sent the tag and that the invoice is now paid by providing the invoice refrance.\n",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "ab3c8e22-50ee-4181-b3b5-26e70a8f3e98",
+            "labels": [
+              "Notify Invoice Received"
+            ],
+            "source": {
+              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
+            },
+            "target": {
+              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
+            },
+            "vertices": [
+              {
+                "x": 1520,
+                "y": 630
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Request Invoice Data",
               "description": "The employee enters the invoice reference to find information about the linked dog owner so that they can create and send the tag.\n",
               "outOfScope": false,
@@ -2500,59 +2567,6 @@
               {
                 "x": 1650,
                 "y": 540
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify Invoice Received",
-              "description": "The employee notifies the system that they have sent the tag and that the invoice is now paid by providing the invoice refrance.\n",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "id": "ab3c8e22-50ee-4181-b3b5-26e70a8f3e98",
-            "labels": [
-              "Notify Invoice Received"
-            ],
-            "source": {
-              "cell": "758635f0-86c5-41a6-b45f-b9b5ff4a98a8"
-            },
-            "target": {
-              "cell": "19a0ecde-7e89-4eef-80f5-8690d3fee6c1"
-            },
-            "vertices": [
-              {
-                "x": 1520,
-                "y": 630
               }
             ]
           },
@@ -3205,7 +3219,7 @@
               "threats": [
                 {
                   "id": "5db0c222-76ad-4c92-aedf-7fbe54465858",
-                  "title": "New STRIDE threat",
+                  "title": "Denial of Service",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
@@ -3220,10 +3234,10 @@
                   "id": "d042589e-a8d4-4e9e-89b8-d1d955c9a5cc",
                   "title": "Fake Invoice",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "An attacker could create a fake invoice in the same style as the real invoices and send them to customers they know are getting dogs and are in the area, so that they can steal money from them.",
-                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convincing invoice. But most people would still be tricked by an official looking invoice even if it was not perfect.\n",
+                  "mitigation": "The invoices would contain all the information you entered about you and your dog, including the random ID, which the registration form will ask the user to keep for this purpose, so that to accurately fake an invoice, the attacker would have to have access to the database.\n\nWell, in the likely case that a user forgot their tag ID, they would still need their other information, to create a convincing invoice. But most people would still be tricked by an official looking invoice even if it was not perfect.\n\nThe problem still persists as most of this data would be publicly available other than the tag ID, which they are likely to forget.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 115,
@@ -3231,11 +3245,11 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 8,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -3453,6 +3467,14 @@
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -3480,6 +3502,32 @@
                   "new": false,
                   "number": 130,
                   "score": ""
+                },
+                {
+                  "id": "4f935f9e-70ca-47df-a049-483b0bb0cbca",
+                  "title": "Disclosure by Injection",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "\nInjection attacks could be used to get information.",
+                  "mitigation": "- Follow industry practices for sanitising input\n- Ensure all libraries used are up-to-date and screened for CSE vulnerabilities\n- The log datastore dose not send infomation anywhere other then to admin staff",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 120,
+                  "score": ""
+                },
+                {
+                  "id": "8a43dbf5-a7cc-4fcf-b5fc-f4da2ead2ab6",
+                  "title": "Repudiation by Injection",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Injection attacks could be used to destroy logs or prevent them form forming by making them contain",
+                  "mitigation": "- Follow industry practices for sanitising input\n- Ensure all libraries used are up-to-date and screened for CSE vulnerabilities\n- even if a log can't be saved, record that an unsantizeable log was made and it's original.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
                 }
               ],
               "isALog": null,
@@ -3489,8 +3537,8 @@
               "storesInventory": null,
               "threatFrequency": {
                 "tampering": 3,
-                "repudiation": 0,
-                "informationDisclosure": 0,
+                "repudiation": 1,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             }
@@ -3500,6 +3548,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 118
+    "threatTop": 121
   }
 }
