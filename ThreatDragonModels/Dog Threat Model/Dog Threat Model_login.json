@@ -119,7 +119,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Register Dog \nWeb Page",
-              "description": "HTTPS web page endpoint(s) and api(s) that are used for dog registration.",
+              "description": "HTTPS web page endpoint(s) and api(s) that are used for dog registration.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -276,7 +276,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "If an attacker gains access to the database, then they could view all the information in the database easily.\n",
-                  "mitigation": "Hash all user information by the generated tag ID so that user information can only be received if you have the tag ID.",
+                  "mitigation": "Hash all user information by the password with salt so that user information can only be received if you have the user name and password.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 50,
@@ -299,7 +299,7 @@
               "threatFrequency": {
                 "tampering": 5,
                 "repudiation": 2,
-                "informationDisclosure": 5,
+                "informationDisclosure": 6,
                 "denialOfService": 2
               }
             }
@@ -1168,95 +1168,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "ACK",
-              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
-                  "title": "Spying",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "some one could spy on the infomation while it is in transit.\n",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                },
-                {
-                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
-                  "title": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
-                  "mitigation": "Use HTTPS",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 56,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 5,
-                "denialOfService": 0
-              }
-            },
-            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
-            "labels": [
-              "ACK"
-            ],
-            "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "target": {
-              "x": 600,
-              "y": 960
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 790
-              },
-              {
-                "x": 560,
-                "y": 870
-              },
-              {
-                "x": 580,
-                "y": 920
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -1453,7 +1364,13 @@
             },
             "target": {
               "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
-            }
+            },
+            "vertices": [
+              {
+                "x": 1260,
+                "y": 340
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1695,169 +1612,6 @@
               {
                 "x": 1450,
                 "y": 230
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Found dog email",
-              "description": "Notify owner that their dog has been found.\nContains: Dog tag ID and last known location, owner’s email address and other personal details.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "c4b7e11f-3d86-4526-b6e8-8fb39fc767c4",
-                  "title": "Adversary in the middle",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "An adversary-in-the-middle intercepts the email and modifies its content or blocks/redirects sending.",
-                  "mitigation": "Use a secure email transfer protocol",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 113,
-                  "score": ""
-                },
-                {
-                  "id": "bfe1c6a1-69e3-46f1-9467-041a4dfd53a0",
-                  "title": "Details publicly accessible",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Email could be intercepted and personal information could be obtained such as name, address, dog location, etc.",
-                  "mitigation": "Minimize personal details in email, especially addresses (could have generic message like ‘Your dog has been found!’).\nUse secure transfer protocol.\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 114,
-                  "score": ""
-                }
-              ]
-            },
-            "id": "9fd2d488-6211-4ab9-a916-8dedbb00b871",
-            "labels": [
-              "Found dog email"
-            ],
-            "source": {
-              "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
-            },
-            "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "vertices": [
-              {
-                "x": 1180,
-                "y": 830
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Enter Dog Registration Information",
-              "description": "Enters the information for registering a dog.\nthe human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS",
-              "threats": [
-                {
-                  "id": "869fa001-8c81-46aa-93a5-5f45af62e438",
-                  "title": "Data manipulation",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS this is prevented as the data is encrypted in transit so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 7,
-                  "score": ""
-                },
-                {
-                  "id": "0fa180d6-f9f3-4d60-9bd8-8779b84a6ccc",
-                  "title": "Information Spying",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Someone could be a man in the middle and spy on people using the application, therefore getting information like their address and email",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 4,
-                "informationDisclosure": 4,
-                "denialOfService": 2
-              }
-            },
-            "id": "b06da6de-4b42-494c-a56b-053f68d4e2b1",
-            "labels": [
-              "Enter Dog Registration Information"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "vertices": [
-              {
-                "x": 550,
-                "y": 960
-              },
-              {
-                "x": 490,
-                "y": 950
-              },
-              {
-                "x": 451.75,
-                "y": 910
               }
             ]
           },
@@ -2591,21 +2345,258 @@
               "protocol": "",
               "threats": []
             },
-            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
+            "id": "b57333f2-2381-429f-8a8a-d2bd98c1dc0e",
             "source": {
               "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
             },
             "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
             },
             "vertices": [
               {
-                "x": -20,
-                "y": 930
+                "x": 220,
+                "y": 200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Attempt Login",
+              "description": "The users username and password are sent(hashed) and checked agenst the data base to see if there is a match",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "96839960-4b4b-4550-a7e4-4df7dd0340ef",
+            "source": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "target": {
+              "cell": "dcc1f2a7-9eb0-4711-bc7f-6b74d5dd640e"
+            },
+            "vertices": [
+              {
+                "x": 140,
+                "y": 410
+              }
+            ],
+            "labels": [
+              "Attempt Login"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack login",
+              "description": "Sends if the login was successfull or not for the user",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1a6ebf2c-0e70-4419-9ad6-51b0e532935e",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "vertices": [
+              {
+                "x": 110,
+                "y": 350
+              }
+            ],
+            "labels": [
+              "Ack login"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log User login attempt",
+              "description": "logs a users attempt at logging in",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ab472359-b7fe-4239-b522-2382cad49d97",
+            "source": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "target": {
+              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+            },
+            "vertices": [
+              {
+                "x": 20,
+                "y": 220
+              }
+            ],
+            "labels": [
+              "Log User login attempt"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Update database with found dog",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5e20be5d-d9c4-48ca-8c7b-91435d00085c",
+            "source": {
+              "cell": "10eb3a27-dc6c-42fc-b3aa-f65101362a1d"
+            },
+            "target": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "vertices": [
+              {
+                "x": 1080,
+                "y": 265
               },
               {
-                "x": 130,
-                "y": 1070
+                "x": 1000,
+                "y": 290
+              }
+            ],
+            "labels": [
+              "Update database with found dog"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1010b5c1-171e-4f7d-af9f-7b18227aca23",
+            "source": {
+              "cell": "4b55e8bf-facd-41e5-af05-a13ca80e9464"
+            },
+            "target": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "vertices": [
+              {
+                "x": 570,
+                "y": 480
               }
             ]
           },
@@ -2674,28 +2665,71 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "Enter Dog Registration Information",
+              "description": "Enters the information for registering a dog.\nthe human pronoun, first and last name, email address, and physical address, and the dog's name and breed. This information is used to create a new entry in the database.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "id": "869fa001-8c81-46aa-93a5-5f45af62e438",
+                  "title": "Data manipulation",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS this is prevented as the data is encrypted in transit so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "0fa180d6-f9f3-4d60-9bd8-8779b84a6ccc",
+                  "title": "Information Spying",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could be a man in the middle and spy on people using the application, therefore getting information like their address and email",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 4,
+                "denialOfService": 2
+              }
             },
-            "id": "b57333f2-2381-429f-8a8a-d2bd98c1dc0e",
+            "id": "b06da6de-4b42-494c-a56b-053f68d4e2b1",
+            "labels": [
+              "Enter Dog Registration Information"
+            ],
             "source": {
-              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
             },
             "target": {
-              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "vertices": [
               {
-                "x": 220,
-                "y": 200
+                "x": 550,
+                "y": 960
+              },
+              {
+                "x": 490,
+                "y": 950
+              },
+              {
+                "x": 451.75,
+                "y": 910
               }
             ]
           },
@@ -2719,73 +2753,72 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "ACK",
+              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
+                  "title": "Spying",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "some one could spy on the infomation while it is in transit.\n",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
+                  "mitigation": "Use HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 56,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 5,
+                "denialOfService": 0
+              }
             },
-            "id": "ab472359-b7fe-4239-b522-2382cad49d97",
+            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
+            "labels": [
+              "ACK"
+            ],
             "source": {
-              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
             },
             "target": {
-              "cell": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1"
+              "x": 600,
+              "y": 960
             },
             "vertices": [
               {
-                "x": 20,
-                "y": 220
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "96839960-4b4b-4550-a7e4-4df7dd0340ef",
-            "source": {
-              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
-            },
-            "target": {
-              "cell": "dcc1f2a7-9eb0-4711-bc7f-6b74d5dd640e"
-            },
-            "vertices": [
+                "x": 520,
+                "y": 790
+              },
               {
-                "x": 140,
-                "y": 410
+                "x": 560,
+                "y": 870
+              },
+              {
+                "x": 580,
+                "y": 920
               }
             ]
           },
@@ -2809,8 +2842,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "attempt login",
+              "description": "Sends username and password to attempt to login",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -2818,7 +2851,123 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "2d79a59f-7393-453b-94fe-0d961e093af4",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                },
+                {
+                  "id": "58a9cd88-ffe8-46fd-9712-583d1ffc4ed4",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Someone could spy on the information while it is in transit.",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 122,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "id": "4c0e2fb2-512d-42d9-862a-65f6e52627d2",
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": 1240
+              },
+              {
+                "x": -130.5,
+                "y": 1140
+              }
+            ],
+            "labels": [
+              "attempt login"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Login",
+              "description": "Send data that acknowledges the login was successful or not.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a9fbe85f-5d8b-4643-ad9d-87e7703614a6",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 123,
+                  "score": ""
+                },
+                {
+                  "id": "26ac1d1b-49b7-4bf4-8bbd-72012dd63668",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could spy on the information while it is in transit.",
+                  "mitigation": "\nBy using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "id": "82dc24f3-78df-43a8-8260-7a733df49b70",
             "source": {
@@ -2835,6 +2984,58 @@
               {
                 "x": 210,
                 "y": 1170
+              }
+            ],
+            "labels": [
+              "Ack Login"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
+            "source": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": -20,
+                "y": 930
+              },
+              {
+                "x": 130,
+                "y": 1070
               }
             ]
           },
@@ -2884,58 +3085,9 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "4c0e2fb2-512d-42d9-862a-65f6e52627d2",
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
-            },
-            "vertices": [
-              {
-                "x": 490,
-                "y": 1240
-              },
-              {
-                "x": -130.5,
-                "y": 1140
-              }
-            ]
-          },
-          {
             "position": {
               "x": 570,
-              "y": 580
+              "y": 575
             },
             "size": {
               "width": 100,
@@ -2958,7 +3110,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Renew\nRegistration",
-              "description": "HTTPS webpage endpoint(s) for renewing a dog's registration.",
+              "description": "HTTPS webpage endpoint(s) for renewing a dog's registration.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3074,7 +3226,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Terminate\nRegistration",
-              "description": "HTTPS webpage endpoint(s) for terminating a dog's registration.",
+              "description": "HTTPS webpage endpoint(s) for terminating a dog's registration.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3177,7 +3329,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Declare Lost\nDog",
-              "description": "HTTPS webpage endpoint(s) for declaring a dog as lost.",
+              "description": "HTTPS webpage endpoint(s) for declaring a dog as lost.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3546,8 +3698,8 @@
           },
           {
             "position": {
-              "x": 175.74999999999955,
-              "y": 570
+              "x": 220,
+              "y": 575
             },
             "size": {
               "width": 160,
@@ -3570,7 +3722,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Notifcation Service",
-              "description": "Used to notify user of changes invoices.",
+              "description": "Used to notify user of changes invoices.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3692,8 +3844,8 @@
           },
           {
             "position": {
-              "x": 963.75,
-              "y": 230
+              "x": 1090,
+              "y": 90
             },
             "size": {
               "width": 112.5,
@@ -3826,24 +3978,38 @@
                 "text": "Log DataStore"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "store",
             "zIndex": 36,
             "id": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Store",
               "name": "Log DataStore",
               "description": "Stores all logs for the system",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "97053c38-f60e-4e54-8fc8-1dd67b543e74",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 130,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -3867,8 +4033,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "7c5b641a-20e5-407c-ba3e-88796914fabd",
             "zIndex": 37,
+            "id": "7c5b641a-20e5-407c-ba3e-88796914fabd",
             "data": {
               "type": "tm.Process",
               "name": "User Registraion",
@@ -3904,11 +4070,12 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 38,
             "id": "59c0638c-48be-4f52-b65a-8350aa65e825",
             "data": {
               "type": "tm.Process",
               "name": "User Login",
-              "description": "",
+              "description": "Used to log users in",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -3916,15 +4083,75 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
-            },
-            "zIndex": 38
+              "threats": [
+                {
+                  "id": "1c9067c1-b377-4dc1-ba46-2c1c433e206b",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Someone could create a fake version of this website, causing people to give their information to the wrong people.",
+                  "mitigation": "\n- Prioritise shorter URLs\n- Purchase and redirect from similar domains",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 125,
+                  "score": ""
+                },
+                {
+                  "id": "ec8ee377-61bb-48b5-8f9b-103cc1919e52",
+                  "title": "Fake login",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Someone could log in as someone else.",
+                  "mitigation": "All passwords are required to be at least 8 characters long and contain a number, letter, and special charter.\n\nUse a CAPTCHA to prevent them from automating it.\n\nFrom M1036\nSet account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. (Use 3 attempts and 10 minites before the next allowed attempt from the IP address or for that specific account.)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 126,
+                  "score": ""
+                },
+                {
+                  "id": "686e7f95-75fb-435d-be17-1aa76c7a469a",
+                  "title": "Flood Endpoint",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Some one could flood the endpoint with fake login attempts to force the end point down.",
+                  "mitigation": "Use IP blocking to prevent one address from being repetedly used.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 127,
+                  "score": ""
+                },
+                {
+                  "id": "f4c634be-884a-4b68-86a4-abd7c17703a9",
+                  "title": "Flood User acount.",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Someone could repeatly fake attempting to login in to an account to trick the system into makeing that account not useable.",
+                  "mitigation": "Use a CAPTCHA to prevent them from automating it and block IP addresses that repeatedly attempt to login to the same account.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 128,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 5,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 5,
+                "elevationOfPrivilege": 0
+              }
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 118
+    "threatTop": 130
   }
 }

@@ -3456,11 +3456,11 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "store",
             "zIndex": 36,
             "id": "ef0edcb0-468b-4b8f-9f52-7f9f56fe2fd1",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Store",
               "name": "Log DataStore",
               "description": "Stores all logs for the system",
               "outOfScope": false,
