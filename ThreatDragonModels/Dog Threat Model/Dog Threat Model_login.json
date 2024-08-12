@@ -2515,94 +2515,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "attempt login",
-              "description": "Sends username and password to attempt to login",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "2d79a59f-7393-453b-94fe-0d961e093af4",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 121,
-                  "score": ""
-                },
-                {
-                  "id": "58a9cd88-ffe8-46fd-9712-583d1ffc4ed4",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "Someone could spy on the information while it is in transit.",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 122,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 4,
-                "informationDisclosure": 1,
-                "denialOfService": 1
-              }
-            },
-            "id": "4c0e2fb2-512d-42d9-862a-65f6e52627d2",
-            "labels": [
-              "attempt login"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
-            },
-            "vertices": [
-              {
-                "x": 540,
-                "y": 1100
-              },
-              {
-                "x": 360,
-                "y": 1180
-              },
-              {
-                "x": -130.5,
-                "y": 1140
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Data Flow",
               "description": "",
               "outOfScope": false,
@@ -2759,98 +2671,6 @@
               {
                 "x": 570,
                 "y": 1150
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Ack Phone",
-              "description": "Sends infomation that the user pressed the # sysmbol and confirmed the login",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "2d050fc0-2b50-4c5b-b5e8-0f3cdbd8f9e0",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
-                  "mitigation": "Use secure protocols to encypt the data in transit.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 133,
-                  "score": ""
-                },
-                {
-                  "id": "9cd444df-8bb0-4c7c-a55e-8cd2655be38d",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Someone could do a man-in-the middle attack and view  the data while it is in transit.",
-                  "mitigation": "Use secure protocols to encypt the data in transit.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 134,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "id": "4e6a4881-2598-4e60-8f22-64c5094fefd1",
-            "labels": [
-              "Ack Phone"
-            ],
-            "source": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "target": {
-              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
-            },
-            "vertices": [
-              {
-                "x": 636.25,
-                "y": 1030
-              },
-              {
-                "x": 600,
-                "y": 1180
-              },
-              {
-                "x": 350,
-                "y": 1420
-              },
-              {
-                "x": -370,
-                "y": 1130
               }
             ]
           },
@@ -3572,6 +3392,456 @@
             "target": {
               "cell": "5b9cb350-4ebb-46fd-acac-07fd96e4e0ed"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Reqeast Identity Verification\n",
+              "description": "\nReqeast a user identify their identity.",
+              "outOfScope": true,
+              "reasonOutOfScope": "Because this is handeled by the real me service.",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "55c7d59f-c005-46e2-abae-3295931ede36",
+            "source": {
+              "cell": "cb7d9d6b-72f2-429e-8a90-ed34b54262f4"
+            },
+            "target": {
+              "x": 590,
+              "y": 1020
+            },
+            "vertices": [
+              {
+                "x": -290,
+                "y": 1280
+              },
+              {
+                "x": 230,
+                "y": 1280
+              }
+            ],
+            "labels": [
+              "Reqeast Identity Verification\n"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verify Identity",
+              "description": "the User Verifys Identity",
+              "outOfScope": true,
+              "reasonOutOfScope": "Because this is handeled by the real me service.",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "089001f7-058f-4daa-8b4b-e35ee4e0d161",
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "x": -660,
+              "y": 430
+            },
+            "vertices": [
+              {
+                "x": 390,
+                "y": 1540
+              },
+              {
+                "x": -390,
+                "y": 1450
+              }
+            ],
+            "labels": [
+              "Verify Identity"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Phone",
+              "description": "Sends infomation that the user pressed the # sysmbol and confirmed the login",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2d050fc0-2b50-4c5b-b5e8-0f3cdbd8f9e0",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
+                  "mitigation": "Use secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 133,
+                  "score": ""
+                },
+                {
+                  "id": "9cd444df-8bb0-4c7c-a55e-8cd2655be38d",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could do a man-in-the middle attack and view  the data while it is in transit.",
+                  "mitigation": "Use secure protocols to encypt the data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 134,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "4e6a4881-2598-4e60-8f22-64c5094fefd1",
+            "labels": [
+              "Ack Phone"
+            ],
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "a574484e-41ae-4a19-834e-c531c354f38f"
+            },
+            "vertices": [
+              {
+                "x": 636.25,
+                "y": 1030
+              },
+              {
+                "x": 600,
+                "y": 1180
+              },
+              {
+                "x": 350,
+                "y": 1420
+              },
+              {
+                "x": -370,
+                "y": 1130
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "attempt login",
+              "description": "Sends username and password to attempt to login",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2d79a59f-7393-453b-94fe-0d961e093af4",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                },
+                {
+                  "id": "58a9cd88-ffe8-46fd-9712-583d1ffc4ed4",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Someone could spy on the information while it is in transit.",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 122,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "id": "4c0e2fb2-512d-42d9-862a-65f6e52627d2",
+            "labels": [
+              "attempt login"
+            ],
+            "source": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "target": {
+              "cell": "59c0638c-48be-4f52-b65a-8350aa65e825"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "x": 360,
+                "y": 1180
+              },
+              {
+                "x": -130.5,
+                "y": 1140
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verify Identity",
+              "description": "Uses the real me service to request the user to verify their identity.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6c50928c-565f-411f-bc8c-86367b1291de",
+                  "title": "man-in-the middle Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 145,
+                  "score": ""
+                },
+                {
+                  "id": "7057621b-76e3-4726-bf9e-08abb906cb9a",
+                  "title": "man-in-the middle spying",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "\nSomeone could do a man-in-the middle attack and Spy on the data while it is in transit.",
+                  "mitigation": "\nBy using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 146,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "id": "4d780fc8-dfd1-4b7c-8128-f22043b0d547",
+            "source": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "target": {
+              "cell": "cb7d9d6b-72f2-429e-8a90-ed34b54262f4"
+            },
+            "labels": [
+              "Verify Identity"
+            ],
+            "vertices": [
+              {
+                "x": -370,
+                "y": 440
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Verfiy Identity",
+              "description": "Ack knowlages if the person is who they say they are",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ad227bd2-74e5-4b64-81cc-06293d60732d",
+                  "title": "man-in-the middle Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "\nSomeone could do a man-in-the middle attack and manipulate the data while it is in transit.",
+                  "mitigation": "\nBy using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 147,
+                  "score": ""
+                },
+                {
+                  "id": "4398c4f4-48ca-4328-8fdf-422c4e1e80fa",
+                  "title": "man-in-the middle  Spying",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could do a man-in-the middle attack and Spy on the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 148,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "id": "ffadcc3d-e25d-4f4b-a722-cae55e385e89",
+            "source": {
+              "cell": "cb7d9d6b-72f2-429e-8a90-ed34b54262f4"
+            },
+            "target": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "vertices": [
+              {
+                "x": -300,
+                "y": 320
+              },
+              {
+                "x": -50,
+                "y": 370
+              }
+            ],
+            "labels": [
+              "Ack Verfiy Identity"
+            ]
           },
           {
             "position": {
@@ -4613,7 +4883,7 @@
             "data": {
               "type": "tm.Process",
               "name": "User Registraion",
-              "description": "",
+              "description": "Registers someone with the provided name and RealMe account and password.\n",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -4867,12 +5137,46 @@
                 "elevationOfPrivilege": 0
               }
             }
+          },
+          {
+            "position": {
+              "x": -702,
+              "y": 365.0000000000001
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "RealMe System"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "cb7d9d6b-72f2-429e-8a90-ed34b54262f4",
+            "zIndex": 40,
+            "data": {
+              "type": "tm.Actor",
+              "name": "RealMe System",
+              "description": "The NZ digital ID service.\n",
+              "outOfScope": true,
+              "reasonOutOfScope": "Handled by the realme system, which is handled by the trusted part of the NZ government.",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "SENG406 Teaching Team",
-    "threatTop": 144
+    "threatTop": 148
   }
 }
