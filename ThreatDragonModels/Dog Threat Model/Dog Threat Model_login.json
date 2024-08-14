@@ -3,7 +3,7 @@
   "summary": {
     "title": "Council Dog Infrastructure Model",
     "owner": "The Council",
-    "description": "Description:\n1. Register a dog\nOwners can register their dogs on the Council’s application webpage. They use their personal details, i.e. pronoun,\nfirst and last name, email address, and physical address where the dog will be located and where the tag needs to be\nshipped to (same address for both). When registering the dog, they submit its name, and breed. Upon completion\nof the registration process, they receive a unique registration number, and an expiry date for the registration. An\ninvoice is generated in PDF and sent by email to the owner, that the owner will have to pay by bank transfer,\nindicating the registration number in reference. A tag with a unique ID is created. The tag ID is an 8 digit unique\nnumber such that at any time, there are no dogs with the same tag ID. The tag will be sent to the address indicated\nby the owner.\n\n2. Renew a registration\nBefore the end of a registration (typically after a year since the registration), owners have to renew a dog’s registration.\nTo this end, they have to input the latest tag ID, and the address to deliver the new tag to. A new invoice\nwill be created and sent to the email address matching that tag. The new tag, with a new ID, will be associated to\nthe dog previously associated to the tag to renew.\n\n3. Terminate a registration\nOwners can terminate a dog’s registration in the event of moving to a new city, the dog being passed to a new\nowner, or the dog’s death. To terminate a dog’s registration, the owner needs to input their email address, the tag\nID, and the dog’s name. A confirmation email will be sent to the owners to confirm that the dog is not registered\nanymore, and that the tag can be destroyed. The email also contains a link to the registration process on the\nCouncil’s application in case the dog’s registration was terminated by mistake.\n\n4. Declare a lost dog.\nOwners can report their dog as lost. To this end, they need to encode their email address used to register the dog,\nand the dog’s name. The Council system will send a confirmation email of the dog’s lost status, with the last known\ntag ID, also displayed on the confirmation webpage.\n\n5. Report a found dog.\nMembers of the public can report found dogs that seem to be lost. For this, they have to input the dog’s tag ID,\nand a physical address where the dog is currently located, so dog services can come and pick it up. The Council will\nthen contact the owner on their email address, matching the tag ID.\n\nList of Actors:\n1. Dog Owners: These are people who interact with the system intending to register a dog, or who have an existing registration.\n2. Members of the Public: These are people who interact with the system to report found dogs. Dog owners can be members of the public, as can council employees.\n3. Council Employees: These are people employed by the Council with special credentials.\n\nList of Constraints and Dependencies:\n- The system must be available publicly on a website from both desktop and mobile devices\n- The full software application is deployed on-premise, controlled by the Council's staff\n- Council staff maintain the infrastructure (hardware) that runs the software application\n\nList of Trust Levels:\n\nList of Entry/Exit Points:\n\nList of Assets:\n\nPotential Improvements to Functional Aspects, and Threat Analysis:\n",
+    "description": "",
     "id": 0
   },
   "detail": {
@@ -104,7 +104,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Register Dog \nWeb Page"
+                "text": "Register Dog"
               },
               "body": {
                 "stroke": "#333333",
@@ -118,7 +118,7 @@
             "id": "16724b90-f94d-4606-bf4d-53fce0427c94",
             "data": {
               "type": "tm.Process",
-              "name": "Register Dog \nWeb Page",
+              "name": "Register Dog",
               "description": "HTTPS web page endpoint(s) and api(s) that are used for dog registration.\n(Requires the user to be logged in.)",
               "outOfScope": false,
               "reasonOutOfScope": "",
