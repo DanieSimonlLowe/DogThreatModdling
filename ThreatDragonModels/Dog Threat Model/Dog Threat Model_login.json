@@ -143,7 +143,7 @@
                 },
                 {
                   "id": "79cc0bda-5678-41c0-bc92-2db3465603a2",
-                  "title": "New STRIDE threat",
+                  "title": "Denial of service",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
@@ -245,7 +245,7 @@
                 },
                 {
                   "id": "37a29e9b-b224-4237-8eab-bc1d921f6de5",
-                  "title": "New STRIDE threat",
+                  "title": "Unauthorized Database Access",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
@@ -2426,95 +2426,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "ACK",
-              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
-                  "title": "Spying",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "some one could spy on the infomation while it is in transit.\n",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                },
-                {
-                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
-                  "title": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
-                  "mitigation": "Use HTTPS",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 56,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 5,
-                "denialOfService": 0
-              }
-            },
-            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
-            "labels": [
-              "ACK"
-            ],
-            "source": {
-              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
-            },
-            "target": {
-              "x": 600,
-              "y": 960
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 790
-              },
-              {
-                "x": 560,
-                "y": 870
-              },
-              {
-                "x": 580,
-                "y": 920
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Data Flow",
               "description": "",
               "outOfScope": false,
@@ -2820,87 +2731,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Attempt Regstration",
-              "description": "Contains the users ",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "4ae820c5-1232-4ac6-979a-6251532f2900",
-                  "title": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 140,
-                  "score": ""
-                },
-                {
-                  "id": "e156f34f-bbf0-4247-943c-89742bdc7009",
-                  "title": "Information Disclosure",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "\nSomeone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 141,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "id": "51b3eee5-e8e8-4bfa-a54e-c187566966ae",
-            "labels": [
-              "Attempt Regstration"
-            ],
-            "source": {
-              "x": 580,
-              "y": 980
-            },
-            "target": {
-              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
-            },
-            "vertices": [
-              {
-                "x": 160,
-                "y": 1010
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Send Invoice",
               "description": "An invoice is generated and mailed to the dog owner.\n",
               "outOfScope": false,
@@ -2913,7 +2743,7 @@
               "threats": [
                 {
                   "id": "7cfd0ebf-36d4-40dd-8712-2db78090e072",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle, spying",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
@@ -2926,7 +2756,7 @@
                 },
                 {
                   "id": "1e5b9ce6-05d3-4997-81fa-d5ba05dcb6d0",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle Tampering",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
@@ -3181,8 +3011,12 @@
                 "y": 1280
               },
               {
-                "x": 230,
-                "y": 1280
+                "x": 30,
+                "y": 1490
+              },
+              {
+                "x": 370,
+                "y": 1380
               }
             ]
           },
@@ -3271,11 +3105,11 @@
               "threats": [
                 {
                   "id": "2d79a59f-7393-453b-94fe-0d961e093af4",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle Tampering",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
                   "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
                   "modelType": "STRIDE",
                   "new": false,
@@ -3284,7 +3118,7 @@
                 },
                 {
                   "id": "58a9cd88-ffe8-46fd-9712-583d1ffc4ed4",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle, spying",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
@@ -3347,90 +3181,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Ack Registration",
-              "description": "Acknowledges if the registration was successful or not.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "72d5c475-6022-4ef9-a5e7-2327b799d01e",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
-                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 135,
-                  "score": ""
-                },
-                {
-                  "id": "ac02dfd3-d7d3-45ea-9965-945da8f0a13e",
-                  "title": "New STRIDE threat",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Someone could spy on the information while it is in transit.",
-                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 136,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
-            "labels": [
-              "Ack Registration"
-            ],
-            "source": {
-              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
-            },
-            "target": {
-              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
-            },
-            "vertices": [
-              {
-                "x": -20,
-                "y": 930
-              },
-              {
-                "x": 130,
-                "y": 1070
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Ack Login",
               "description": "Send data that acknowledges the login was successful or not.",
               "outOfScope": false,
@@ -3443,7 +3193,7 @@
               "threats": [
                 {
                   "id": "a9fbe85f-5d8b-4643-ad9d-87e7703614a6",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle Tampering",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
@@ -3456,7 +3206,7 @@
                 },
                 {
                   "id": "26ac1d1b-49b7-4bf4-8bbd-72012dd63668",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle, spying",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
@@ -3527,7 +3277,7 @@
               "threats": [
                 {
                   "id": "2d050fc0-2b50-4c5b-b5e8-0f3cdbd8f9e0",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle Tampering",
                   "status": "Mitigated",
                   "severity": "Low",
                   "type": "Tampering",
@@ -3540,7 +3290,7 @@
                 },
                 {
                   "id": "9cd444df-8bb0-4c7c-a55e-8cd2655be38d",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle, spying",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
@@ -3619,7 +3369,7 @@
               "threats": [
                 {
                   "id": "6ae7d35b-0bdd-4bae-a182-96de3c25d27b",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle Tampering",
                   "status": "Mitigated",
                   "severity": "Low",
                   "type": "Tampering",
@@ -3632,7 +3382,7 @@
                 },
                 {
                   "id": "6a7b8ae9-b452-40da-ac5f-c1f78a49ffed",
-                  "title": "New STRIDE threat",
+                  "title": "Man in the middle, spying",
                   "status": "Mitigated",
                   "severity": "Low",
                   "type": "Information disclosure",
@@ -3840,6 +3590,260 @@
               {
                 "x": -370,
                 "y": 440
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ACK",
+              "description": "acknowledges that the registration was successful, and informs the owner of the registration number and expiry date for the registration.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a1378a6f-1445-4379-a8ee-77eec2318beb",
+                  "title": "Spying",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "some one could spy on the infomation while it is in transit.\n",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "37e2bbe5-6374-44c7-abef-692782598728",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Acknowledgement could be tampered with; i.e., changing registration number to another registration. Since this is used in the reference for a bank transfer, the owner could end up failing to pay their own registration.",
+                  "mitigation": "Use HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 56,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 5,
+                "denialOfService": 0
+              }
+            },
+            "id": "73ab2cb9-50a6-4a05-be06-24f92caa2996",
+            "labels": [
+              "ACK"
+            ],
+            "source": {
+              "cell": "16724b90-f94d-4606-bf4d-53fce0427c94"
+            },
+            "target": {
+              "x": 600,
+              "y": 960
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 790
+              },
+              {
+                "x": 560,
+                "y": 870
+              },
+              {
+                "x": 580,
+                "y": 920
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Attempt Regstration",
+              "description": "Contains the users ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4ae820c5-1232-4ac6-979a-6251532f2900",
+                  "title": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 140,
+                  "score": ""
+                },
+                {
+                  "id": "e156f34f-bbf0-4247-943c-89742bdc7009",
+                  "title": "Information Disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "\nSomeone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 141,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "id": "51b3eee5-e8e8-4bfa-a54e-c187566966ae",
+            "labels": [
+              "Attempt Regstration"
+            ],
+            "source": {
+              "x": 580,
+              "y": 980
+            },
+            "target": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "vertices": [
+              {
+                "x": 160,
+                "y": 1010
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ack Registration",
+              "description": "Acknowledges if the registration was successful or not.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "72d5c475-6022-4ef9-a5e7-2327b799d01e",
+                  "title": "Man in the middle Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone could do a man-in-the middle attack and view and manipulate the data while it is in transit.",
+                  "mitigation": "By using HTTPS, this is prevented as the data is encrypted in transit, so they could only do this if they got the data from the connection at the very start.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 135,
+                  "score": ""
+                },
+                {
+                  "id": "ac02dfd3-d7d3-45ea-9965-945da8f0a13e",
+                  "title": "Man in the middle, spying",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone could spy on the information while it is in transit.",
+                  "mitigation": "By using HTTPS, someone would need to see the start of the communication to be able to intercept the communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 136,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "557e49ae-e717-423b-951e-ed4a848243c6",
+            "labels": [
+              "Ack Registration"
+            ],
+            "source": {
+              "cell": "7c5b641a-20e5-407c-ba3e-88796914fabd"
+            },
+            "target": {
+              "cell": "ed2114a9-83dd-4de7-90d8-9e78a9154740"
+            },
+            "vertices": [
+              {
+                "x": -20,
+                "y": 930
+              },
+              {
+                "x": 130,
+                "y": 1070
               }
             ]
           },
@@ -4446,7 +4450,7 @@
               "threats": [
                 {
                   "id": "7e172ff5-0f17-4ec8-a19f-4d147acd41d8",
-                  "title": "New STRIDE threat",
+                  "title": "Insider Misuse of Personal Data",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
@@ -4459,7 +4463,7 @@
                 },
                 {
                   "id": "f11a1a74-b633-4a57-b744-332953793ac8",
-                  "title": "New STRIDE threat",
+                  "title": "Insider Misuse of tag paid system",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
@@ -4559,7 +4563,7 @@
               "threats": [
                 {
                   "id": "5db0c222-76ad-4c92-aedf-7fbe54465858",
-                  "title": "New STRIDE threat",
+                  "title": "Denial of Service",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
@@ -5077,7 +5081,7 @@
               "threats": [
                 {
                   "id": "1c9067c1-b377-4dc1-ba46-2c1c433e206b",
-                  "title": "New STRIDE threat",
+                  "title": "Website Spoofing",
                   "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
